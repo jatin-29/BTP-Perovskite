@@ -17,6 +17,8 @@ honest (grouped) validation.
 | `figure_notes.md` | 3 to 5 plain lines per figure |
 | `glossary.md` | Plain-language meaning of the technical terms |
 | `experimental_template.csv` | Pure compounds with dataset gaps filled and experimental columns empty (to fill in) |
+| `experimental/experimental_candidates.csv` | Candidate literature band gaps (18 compounds, with method, phase, reference, DOI, location); status "candidate, student must verify" |
+| `data_issues_for_authors.md` | Neutral list of observed data issues that could be sent to the dataset authors |
 | `Papers/` | Background papers (not used by the code) |
 
 ## How to run
@@ -37,14 +39,15 @@ working folder (`/content`). Download `figures/`, `tables/` and `numbers.json` a
 
 **Experimental comparison (stage 7)**: copy `experimental_template.csv` to `experimental/experimental_verified.csv`,
 fill `exp_gap`, `exp_reference` and `exp_phase_and_temperature` from primary papers, and re-run. Until then, stage 7
-uses DRAFT values, and its figure is stamped "DRAFT, unverified experimental values".
+uses DRAFT values: v1 (approximate values) and v2 (`experimental/experimental_candidates.csv`), each figure stamped as DRAFT.
 
-**Second radii set (stage 8)**: add a dictionary next to `"dataset"` in `RADII_SETS` (config cell) and re-run.
+**Radii sets (stage 8)**: `RADII_SETS` in the config cell holds the dataset radii and a Shannon CN12/CN6 set built from pymatgen
+(sources in `tables/radii_sets_sources.csv`). A third set can be added the same way.
 
 ## Environment used for the saved run
 
 - Python 3.13.18, numpy 2.5.3, pandas 3.0.5, matplotlib 3.11.2, scipy 1.18.1, scikit-learn 1.9.1, pymatgen 2026.10.31 (Linux container).
-- Run time: about 2 minutes for the whole notebook (most of it is the RandomForest runs in stage 8). The exact value is `notebook_runtime_seconds` in `numbers.json`.
+- Run time: about 3.5 minutes for the whole notebook (most of it is the RandomForest runs in stage 8). The exact value is `notebook_runtime_seconds` in `numbers.json`.
 - Install note: `pip install pymatgen` first failed because the `bibtexparser` wheel could not be built with the
   system's old setuptools. `pip install --upgrade --ignore-installed setuptools` fixed it. No replacement package was needed.
 - All random seeds are fixed (`random_state=0`).

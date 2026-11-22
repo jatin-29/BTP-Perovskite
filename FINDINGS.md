@@ -1,7 +1,7 @@
 # FINDINGS
 
-Status (2026-11-22, session 2): all stages 0 to 10 done; session 2 tasks 1-7 (paper checks, Bartel check, candidate
-experimental values, second radii set, suspicious-row sensitivity, tidy-up, uncertainty) are being added below.
+Status (2026-11-22, session 2): all stages 0 to 10 done; session 2 tasks 1-7 done (dataset paper checks, Bartel check,
+candidate experimental values, second radii set, suspicious-row sensitivity, tidy-up, uncertainty of the core result).
 All numbers below come from `btp_perovskite.ipynb` (executed with outputs). The source of each number is in
 `numbers.json` (key and stage) and in the `tables/` CSV files named next to it.
 
@@ -241,8 +241,7 @@ the held-out element are left out: 48 to 68 per split.
 mean baseline 2.059; geometry only: RF 1.847, Ridge 2.126; geometry + Z: RF 1.954, Ridge 1.725;
 geometry + electronic: RF 0.447, Ridge 0.698 eV. RF per element (geometry + electronic): Ge 0.62, Sn 0.71, Pb 0.52,
 Ca 0.48, Sr 0.16, Ba 0.19. Ridge Pb 1.63. All within 0.007 eV of section 9 item 7.
-- Robustness: RF over 10 seeds gives 0.447 to 0.463 (geometry + electronic). 95 percent bootstrap range of the average
-  MAE (test rows resampled): RF 0.39 to 0.50, Ridge 0.65 to 0.76, mean baseline 1.94 to 2.17 eV.
+- Robustness: see "Uncertainty of the core result (session 2)" below (10 seeds, 1000 bootstrap resamples, paired test).
 - Geometry alone does not beat the mean baseline in a meaningful way (RF 1.85 vs 2.06; Ridge is worse than the baseline).
 - Why Ridge fails on Pb (session 2, `tables/stage5_test_outside_training_range.csv`): all 22 Pb test rows lie outside the
   training range of EN_B (test 2.33; training 0.89-2.01) and of Z_B (82; training at most 56), and 68% lie outside the training
@@ -275,6 +274,30 @@ only shows that the label explains as much. It does not show that EN_B or IE_B c
   g14_flag RF 0.359 / Ridge 0.354.
 - Strict Group 14 linear model, grouped R2: PBE 0.736 (n=178), HSErel 0.544 (88), HSErel_SOC 0.684 (82), HSE-PBE-SOC 0.738 (76).
 - Second radii set: done in session 2, see "Second radii set (session 2)" below.
+
+## Uncertainty of the core result (session 2, stage 8 parts 3a, 3b)
+
+**U1. CONFIRMED. The ranking geometry only >> + all electronic > + g14_flag only is far larger than the seed and test-sample
+noise.** Clean leave-one-B-out, HSE-PBE-SOC target, average MAE over the 6 held-out elements.
+- RandomForest, seeds 0-9 (`tables/fig21_rf_seed_summary.csv`): geometry only 1.869 +/- 0.015 eV (range 1.847-1.892);
+  + g14_flag only 0.357 +/- 0.006 (0.348-0.364); + all electronic 0.455 +/- 0.005 (0.447-0.463). Mean +/- standard
+  deviation over 10 seeds. Ridge has no random seed.
+- Bootstrap over test compounds, 1000 resamples of the test rows of each held-out element (seed-0 models;
+  `tables/fig21_lobo_bootstrap.csv`; error bars in fig21 panel b). MAE [95% range], RandomForest:
+  geometry only: Ge 3.08 [2.72, 3.44], Sn 1.61 [1.41, 1.79], Pb 0.47 [0.34, 0.61], Ca 3.39 [3.09, 3.67], Sr 1.94 [1.64, 2.20],
+  Ba 0.60 [0.45, 0.73], average 1.85 [1.75, 1.95].
+  + g14_flag only: Ge 0.62 [0.41, 0.87], Sn 0.46 [0.40, 0.51], Pb 0.38 [0.30, 0.46], Ca 0.39 [0.26, 0.53], Sr 0.16 [0.09, 0.24],
+  Ba 0.15 [0.11, 0.19], average 0.36 [0.31, 0.41].
+  + all electronic: Ge 0.62 [0.39, 0.88], Sn 0.71 [0.59, 0.81], Pb 0.52 [0.41, 0.62], Ca 0.48 [0.38, 0.60], Sr 0.16 [0.11, 0.22],
+  Ba 0.18 [0.12, 0.26], average 0.45 [0.39, 0.50].
+  Ridge averages: geometry only 2.13 [2.05, 2.20]; + g14_flag only 0.34 [0.30, 0.39]; + all electronic 0.70 [0.65, 0.76]
+  (Pb 1.63 [1.51, 1.76]).
+- The two average intervals for "+ g14_flag only" and "+ all electronic" (RF) overlap slightly. Both are evaluated on the
+  same test rows, so a paired bootstrap is the right comparison (`tables/stage8_paired_bootstrap_label_vs_electronic.csv`):
+  MAE(all electronic) minus MAE(g14_flag only) = +0.085 eV [0.047, 0.121] for RandomForest and +0.355 eV [0.319, 0.387]
+  for Ridge. The label alone is better in 100% of the 1000 resamples for both models.
+- Limits: the bootstrap resamples test compounds only. It does not retrain the models and does not cover the choice
+  of the 6 held-out elements (there are only 6).
 
 ## Second radii set (session 2, stage 8 part 1)
 

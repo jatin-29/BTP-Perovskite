@@ -33,7 +33,7 @@ their own colours.
 - Observation: for PbI3 the shift is -1.16 eV with Cs, K or Rb and -0.67 (MA) and -0.64 eV (FA).
 
 **fig06_halide_trend.png**
-- Mean gap of pure compounds against halide for each B element, PBE (dashed) and HSE-PBE-SOC (solid), on the same compounds; error bars = std over A; n per cell under each panel.
+- Mean gap of pure compounds against halide for each B element, PBE (dashed) and HSE-PBE-SOC (solid). Both levels use the SAME compounds in each cell; error bars = std over A; n per cell under each panel.
 - Look for: the downward slope from Cl to I and the change of order of Ge and Pb between the two levels.
 - Observation: the gap falls from Cl to I for every B element at both levels; the Group 14 order is Pb > Ge > Sn at PBE and Ge > Pb > Sn at HSE-PBE-SOC.
 
@@ -63,9 +63,9 @@ their own colours.
 - Observation: the K and Rb intervals include zero under both bootstraps; the Ge interval includes zero only under the group bootstrap.
 
 **fig12_random_vs_grouped.png**
-- Out-of-fold R2 with random 5-fold and grouped 5-fold CV for the mean baseline, the linear model and products Ridge at four alphas (plus nested alpha, grouped only), strict Group 14.
-- Look for: the gap between the two bars for each model.
-- Observation: at alpha 0.1 the random R2 is 0.92 and the grouped R2 is 0.79; for the linear model both are 0.74.
+- Out-of-fold R2 with random 5-fold and grouped 5-fold CV for the mean baseline, the linear model and products Ridge at four fixed alphas, plus nested alpha (grouped only), strict Group 14.
+- Look for: the gap between the two bars for each model. The headline for the products model is the nested bar; the fixed-alpha bars are for comparison only.
+- Observation: at alpha 0.1 the random R2 is 0.92 and the grouped R2 is 0.79; the nested grouped R2 is 0.86; for the linear model both CV types give 0.74.
 
 **fig13_deviation_residuals.png**
 - Residual of the HSE-PBE-SOC gap after a linear fit on B and X fractions, against each deviation-of-cubicity column, coloured by A type (strict Group 14, n = 75).
@@ -97,10 +97,15 @@ their own colours.
 - Look for: in (b), the size of the HSErel and HSErel_SOC bars compared with PBE and HSE-PBE-SOC.
 - Observation: Ridge on PBE + descriptors reaches 0.17 eV for HSE-PBE-SOC; the offsets range 0.20 to 0.71 (PBE), 0.31 to 0.89 (HSE-PBE-SOC) and 0.96 to 2.31 eV (HSErel_SOC).
 
-**fig19_vs_experiment.png** (DRAFT, unverified experimental values)
-- Parity of dataset gaps (PBE, HSErel_SOC, HSE-PBE-SOC) against DRAFT experimental values, Cs versus organic A, and the error against halide.
-- Look for: nothing final. This figure must be redone when `experimental/experimental_verified.csv` is filled in.
-- Observation: with the DRAFT values, the HSE-PBE-SOC mean error is -0.73 eV for the 3 Cs compounds and -0.34 eV for the 8 organic compounds.
+**fig19_vs_experiment.png** (DRAFT v1, unverified experimental values)
+- Parity of dataset gaps (PBE, HSErel_SOC, HSE-PBE-SOC) against the approximate DRAFT values of CLAUDE.md section 9 item 8, Cs versus organic A, and the error against halide.
+- Look for: nothing final. Superseded in practice by the candidate version below; both must be redone with verified values.
+- Observation: with these DRAFT values, the HSE-PBE-SOC mean error is -0.73 eV for the 3 Cs compounds and -0.34 eV for the 8 organic compounds.
+
+**fig19_vs_experiment_candidates.png** (DRAFT v2, candidate experimental values, not verified)
+- (a-d) Parity of the dataset gap at each of the four levels against one candidate literature value per compound (colour = Cs or organic A; marker = phase class of the measurement: cubic, non-cubic, unknown); (e) mean signed error by halide; (f) mean signed error by phase class.
+- Look for: the black (Cs) points below the diagonal in (a), (c) and (d), and the small n in each phase class.
+- Observation: at HSE-PBE-SOC the mean signed error is -0.93 eV for 7 Cs compounds and -0.27 eV for 9 organic compounds; MAE over 16 compounds is 0.56 eV.
 
 **fig20_bowing.png**
 - (a-c) PBE gap against halide fraction for mixed-halide compounds, with straight lines between the pure end members; (d-i) deviation from that line at PBE and HSE-PBE-SOC. Black rings = flagged outliers.
@@ -108,6 +113,6 @@ their own colours.
 - Observation: at PBE the mean deviation is negative for strict Group 2 in all three pairs (-0.18 to -0.32 eV) and +0.03 to +0.14 eV for strict Group 14. No I-Cl compound has both end members at HSE-PBE-SOC.
 
 **fig21_robustness.png**
-- (a) Average clean leave-one-B-out MAE of RF over 10 seeds; (b) the same test for PBE and HSErel_SOC targets; (c) with and without the 41 equal_flag rows; (d) 95 percent bootstrap ranges of the per-element MAE (geometry + electronic).
-- Look for: whether any change moves the geometry + electronic result close to the geometry-only result.
-- Observation: RF geometry + electronic stays between 0.45 and 0.53 eV across seeds, targets and the equal_flag removal; geometry only stays above 1.4 eV.
+- (a) Average clean leave-one-B-out MAE of RandomForest over 10 seeds for geometry only, + g14_flag only and + all electronic; (b) per-element MAE with 95% ranges from 1000 bootstrap resamples of the test rows (RandomForest); (c) the same test for PBE and HSErel_SOC targets; (d) with and without the 41 equal_flag rows; (e) stage 5 numbers with the dataset radii and with Shannon CN12/CN6 radii; (f) Pearson r of the geometric descriptors with the HSE-PBE-SOC gap for both radii sets.
+- Look for: whether the "+ g14_flag only" and "+ all electronic" results stay far below "geometry only" in every panel, and which bars move in (e) and (f).
+- Observation: RandomForest average MAE over 10 seeds is 1.869 +/- 0.015 (geometry only), 0.357 +/- 0.006 (+ g14_flag) and 0.455 +/- 0.005 eV (+ all electronic); with Shannon radii the geometry-only RF MAE rises from 1.85 to 3.03 eV.

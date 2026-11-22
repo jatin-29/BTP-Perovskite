@@ -4764,6 +4764,16 @@
   "stage": "stage 8 (3b)",
   "note": "1000 bootstrap resamples of test rows"
  },
+ "paired_boot_elec_minus_label_RandomForest": {
+  "value": 0.085,
+  "stage": "stage 8 (3b)",
+  "note": "95% range 0.047 to 0.121; label better in 1.000 of resamples"
+ },
+ "paired_boot_elec_minus_label_Ridge": {
+  "value": 0.355,
+  "stage": "stage 8 (3b)",
+  "note": "95% range 0.319 to 0.387; label better in 1.000 of resamples"
+ },
  "robust_equal_with_geometry_only_mean_baseline": {
   "value": 2.059,
   "stage": "stage 8",
@@ -5425,7 +5435,7 @@
   "note": ""
  },
  "notebook_runtime_seconds": {
-  "value": 164.132,
+  "value": 194.805,
   "stage": "stage 10",
   "note": "wall time of this run up to stage 10"
  },
