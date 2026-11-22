@@ -30,13 +30,11 @@ Max |difference| = 2.2e-16 (t) and 1.1e-16 (mu) over 488 rows. This uses the rad
 
 **A3. CONFIRMED. The dataset's "Bartel's Tolerance Factor" column is only the term (rA/rB)/ln(rA/rB)** (max difference
 1.8e-14). It is not used anywhere. Bartel tau is recomputed as tau = rX/rB - nA (nA - (rA/rB)/ln(rA/rB)) with nA = 1.
-- Formula check: the equation was compared with the open-access copy of Bartel et al., Sci. Adv. 2019, 5, eaav0693
-  (PubMed Central PMC6368436), read through a web fetch. Quoted text: "n_A is the oxidation state of A, r_i is the ionic
-  radius of ion i, r_A > r_B by definition, and tau < 4.18 indicates perovskite". The fetched equation matches the
-  formula above. The fetched text was flattened, so please look once at the typeset Eq. 2 in the PDF.
-- Bartel's paper uses Shannon radii. This project uses the dataset's radii set (A-site radii for MA and FA included),
-  so tau here is "Bartel's formula with the dataset radii", not Bartel's own tau. With these radii 230 of 490
-  compounds have tau < 4.18.
+- Formula check (done in session 2, see "Bartel tolerance factor check" below): the notebook formula is identical to Eq. (2)
+  of Bartel et al. Nothing needed fixing, so no tau result changed.
+- Bartel's paper uses Shannon radii (A closest to coordination 12, B closest to coordination 6). This project uses the
+  dataset's radii set, so tau here is "Bartel's formula with the dataset radii". With these radii 230 of 490 compounds
+  have tau < 4.18. The second radii set (task 4) is closer to Bartel's choice.
 
 **A4. Known data issues (documented, not removed).**
 - `equal_flag`: 41 of 244 rows have identical HSErel_SOC and HSE-PBE-SOC gaps (37 strict Group 2, 4 mixed B, 0 strict
@@ -55,6 +53,72 @@ Max |difference| = 2.2e-16 (t) and 1.1e-16 (mu) over 488 rows. This uses the rad
   (FAGeCl3, FA0.5K0.375Cs0.125GeCl3, K0.125FA0.875SnCl3). The points near 4.2 to 4.4 eV are strict Group 2 (22) and mixed B (4). Only one of
   them is flagged by the robust rule (`tables/stage1_pbe_windows.csv`). By this rule they are ordinary members of their
   groups, not outliers.
+
+## Dataset paper checks (session 2)
+
+Source read: arXiv 2302.04896v1 (9 Feb 2023, the only version on arXiv), "A High-Throughput Computational Dataset of
+Halide Perovskite Alloys", J. Yang, P. Manganaris, A. Mannodi-Kanakkithodi. 23-page PDF (main text pp. 1-15, supplement
+pp. 16-23), downloaded from arxiv.org and read as text. Page numbers are PDF pages. The published Digital Discovery
+version was not readable (publisher HTTP 403), so small differences from the published version are possible.
+
+**P1. Band gap RMSE versus experiment (Table 2, p. 5, Section 3.1).** "Band Gap RMSE vs Exp (eV)": PBE 0.78, HSE-rel 0.93,
+HSE-rel-SOC 0.74, HSE-PBE-SOC 0.70. Text (p. 5): "We find that on average, HSE-PBE-SOC is the best approach out of the
+four for reproducing band gaps". On p. 6 the paper notes that the PBE RMSE "is not significantly different" from the
+HSE-PBE-SOC RMSE ("accidental accuracy of semi-local functionals without SOC for hybrid organic-inorganic perovskites").
+- Number of compounds: NOT stated. Table 2 has no count column, and the text gives no number. The experimental values are
+  "collected from Tao el al and Almora et al" (p. 5). In the arXiv text these two references are not resolved (printed as "?").
+  The points are only shown in Fig. 3(b) (p. 5). So the size and composition of the experimental set behind Table 2 are unknown.
+- Lattice constants (p. 5): PBE RMSE 0.27 Å, HSE RMSE 0.31 Å versus experiment.
+- This confirms the section 9 item 9 statement ("about 0.70 eV RMSE for HSE-PBE-SOC; HSErel worst") -> CONFIRMED.
+
+**P2. Supplementary table for cubic compounds: does NOT exist in the arXiv version.** The supplement (pp. 16-23) has
+Figs. S1-S12, Table SI (p. 22, list of 50 descriptor labels without values), Table SII (p. 23, 32 compounds screened at
+PBE with PBE gap, decomposition energy and SLME) and Table SIII (p. 23, 14 compounds screened at HSE-PBE-SOC).
+No table compares cubic-structure calculations with experiment. The paper (p. 6) says that "non-cubic phases may affect
+the accuracy of the computational results here".
+- Check of SII/SIII against the xlsx (notebook stage 0e2, `tables/stage0_paper_SI_gap_check.csv`): 42 of 46 printed gaps
+  agree with the file within 0.01 eV. 4 rows of Table SII do not. CsSnI1.875Br1.125: paper 2.47, file 0.547;
+  CsPbI0.75Br2.25: paper 2.49, file 1.619; CsPbBr2.625Cl0.375: paper 1.98, file 1.780; MAPbI2.25Br0.75: paper 1.53, file 1.829 eV.
+  These are the last four rows of the table. The cause is not known (possibly a row shift in the printed table). The
+  notebook uses the xlsx values.
+
+**P3. Ionic radii source: NOT given in the paper.** The paper gives no radii values and cites no radii source.
+Section 3.6 (p. 11) defines the octahedral factor, the Goldschmidt factor and "tBartel = rX/rB - [1 - (rA/rB)/ln(rA/rB)]"
+(Eqs. 9-11) and states that "weighted averages of A-site (rA), B-site (rB), and X-site (rX) radii are considered" for mixed
+compounds. The only citation there is ref. 7 (Bartel et al. 2019). The radii in this project were recovered from the
+dataset's own t and mu columns (CLAUDE.md section 4). Comparison with pymatgen's Shannon table (task 4) shows that these
+radii are a mixture: K 1.51, Rb 1.61, Cs 1.74, Sr 1.26 and Ba 1.42 equal Shannon ionic radii at coordination VIII.
+Pb 1.19, Ca 1.00 and Cl 1.81, Br 1.96, I 2.20 equal Shannon ionic radii at coordination VI. Ge 0.87 equals the Shannon
+CRYSTAL radius at coordination VI (the ionic radius is 0.73). Sn 1.15 is not in pymatgen's Shannon table (no Sn2+ entry).
+MA 2.17 and FA 2.53: source not stated in the paper (see task 4).
+- The paper's "tBartel" (Eq. 11) is Bartel's tau with nA = 1 written out. The dataset column, however, holds only the
+  (rA/rB)/ln(rA/rB) term (item A3), not the full expression.
+
+**P4. 495 versus 490 compositions.** The paper states 495 in the abstract (p. 1), Section 1 (p. 2), Table 1 (p. 4) and the
+Conclusions (p. 14). Section 2.1 (p. 4) gives "90 pure, 126 A-site mixed, 151 B-site mixed, and 127 X-site mixed" =
+494, not 495, so the paper's own breakdown is one short of its total. Table 1 (p. 4): PBE 495, HSE-rel 299, HSE-rel-SOC 282, HSE-PBE-SOC 244.
+The xlsx file (stage 0e2, `tables/stage0_paper_counts.csv`): PBE sheet 488 rows (7 fewer than Table 1). By mixing type
+among the PBE rows: pure 90 (paper 90), A-mixed 124 (126), B-mixed 151 (151), X-mixed 123 (127). The three HSE counts
+match exactly (299, 282, 244). The outer merge has 490 compounds because 2 compounds appear only in the HSE sheets.
+The paper does not explain the difference, and it says nothing about excluded or failed calculations. So: the
+public file lacks 7 PBE entries (2 A-mixed, 4 X-mixed, and 1 more that also cannot be placed because the paper's own
+breakdown sums to 494). Which compounds are missing cannot be determined from the paper.
+- Data availability (p. 15): "https://github.com/yjq829/perovskite_dataset.git" (the repository used here). The title-block
+  ESI footnote points to a different repository (github.com/PanayotisManganaris/manuscript--PIP-data-manifest), which
+  was not checked.
+
+## Bartel tolerance factor check (session 2)
+
+**T1. CONFIRMED. The notebook formula equals Bartel's Eq. (2).** Source read: arXiv 1801.07700v2 (revised 6 Jan 2019),
+PDF p. 2, and the Science Advances version (Sci. Adv. 2019, 5, eaav0693, PMC6368436), where it is also Eq. (2).
+Plain text: tau = rX/rB - nA * ( nA - (rA/rB) / ln(rA/rB) )   (Eq. 2)
+"where nA is the oxidation state of A, ri is the ionic radius of ion i, rA > rB by definition and tau < 4.18 indicates
+perovskite" (arXiv p. 2). The discussion of Fig. 4 writes it for nA = 1 as tau = rX/rB + (rA/rB)/ln(rA/rB) - 1, which is
+the same expression. Radii: Shannon radii, with the A and B radii "chosen to be closest to the coordination number of 12
+and 6" (Materials and Methods, "Radii assignment"). No coordination number is given for X. Bartel gives no radii for MA or FA.
+For double perovskites rB is the arithmetic mean of the two B radii. Bartel gives no rule for mixed A or X sites (the
+weighted average used here is this project's choice, as in the dataset paper). The notebook already used this formula,
+so no result changed.
 
 ## B. Descriptive physics (stages 1 and 2)
 
@@ -230,7 +294,7 @@ that HSErel is the worst level (section 9 item 9). The paper's web page refused 
 | 5: "+ deviation" grouped R2 (read from a bar chart) | about 0.72 | 0.786 | +0.07 | bar-chart reading; same 75 rows here |
 | 5: "grouped R2 0.73 to 0.82" with deviation | 0.73 -> 0.82 | 0.780 -> 0.854 | +0.05 / +0.03 | here n=75 (one row without deviation); earlier row set unknown |
 | 6: organic minus Cs ranges | PBE 0.2-0.6, HPS 0.3-0.7, HSErel_SOC 1.0-1.9 | 0.20-0.71, 0.31-0.89, 0.96-2.31 | upper ends +0.1 to +0.4 | the SnBr3 pairs fall outside the earlier ranges |
-| Stage 7 refers to "section 9 item 10" | - | item 8 used | - | section 9 has no item 10; item 8 holds the draft values |
+| Stage 7 refers to "section 9 item 10" | - | item 8 used | - | fixed in CLAUDE.md in session 2 (now reads item 8) |
 
 Within 0.05 (reproduced): SOC shifts (item 1), all-compound halide means (item 2), A-site and X-site variance
 fractions (item 3), linear R2 and coefficients (item 4), MA/FA/Ge coefficient changes (item 5), every clean
@@ -238,8 +302,8 @@ leave-one-B-out number (item 7), all quoted dataset values (item 6).
 
 ## Open questions and things not done
 
-1. The dataset paper (Digital Discovery 2023) could not be read here (publisher page HTTP 403; not in `papers/`). Not
-   verified: the 495 versus 490 count, Table 2 (RMSE versus experiment, best level), and the radii source the authors used.
+1. RESOLVED in session 2 through the arXiv version (see "Dataset paper checks"). Still open: the size of the experimental
+   set behind the paper's Table 2, and which 7 PBE compounds are missing from the public file.
 2. No second radii set was supplied, so robustness test (1) was skipped.
 3. Experimental comparison is DRAFT only, until `experimental/experimental_verified.csv` is filled from primary papers.
 4. Cause of the 41 equal_flag rows is unknown. A question for the dataset authors.

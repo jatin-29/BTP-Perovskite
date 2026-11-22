@@ -39,6 +39,11 @@
   "stage": "stage 0",
   "note": ""
  },
+ "paper_SI_gaps_agreeing": {
+  "value": 42,
+  "stage": "stage 0",
+  "note": "of 46 SI gap values"
+ },
  "max_abs_diff_tolerance": {
   "value": 0.0,
   "stage": "stage 0",
@@ -3575,7 +3580,7 @@
   "note": ""
  },
  "notebook_runtime_seconds": {
-  "value": 115.6049,
+  "value": 118.0993,
   "stage": "stage 10",
   "note": "wall time of this run up to stage 10"
  },
