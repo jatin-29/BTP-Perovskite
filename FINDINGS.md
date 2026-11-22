@@ -1,6 +1,7 @@
 # FINDINGS
 
-Status (2026-11-22): all stages 0 to 10 are done and committed, including optional stage 9 (end of file).
+Status (2026-11-22, session 2): all stages 0 to 10 done; session 2 tasks 1-7 (paper checks, Bartel check, candidate
+experimental values, second radii set, suspicious-row sensitivity, tidy-up, uncertainty) are being added below.
 All numbers below come from `btp_perovskite.ipynb` (executed with outputs). The source of each number is in
 `numbers.json` (key and stage) and in the `tables/` CSV files named next to it.
 
@@ -246,7 +247,50 @@ only shows that the label explains as much. It does not show that EN_B or IE_B c
 - Without the 41 equal_flag rows (203 rows): RF geometry + electronic 0.501 (vs 0.447), Ridge 0.729 (vs 0.698),
   g14_flag RF 0.359 / Ridge 0.354.
 - Strict Group 14 linear model, grouped R2: PBE 0.736 (n=178), HSErel 0.544 (88), HSErel_SOC 0.684 (82), HSE-PBE-SOC 0.738 (76).
-- Second radii set: NOT RUN. None was supplied. The code path exists: add a set to `RADII_SETS` in the config cell.
+- Second radii set: done in session 2, see "Second radii set (session 2)" below.
+
+## Second radii set (session 2, stage 8 part 1)
+
+Set `shannon_CN12_CN6` (config cell). Sources per radius: `tables/radii_sets_sources.csv`.
+- K 1.64, Rb 1.72, Cs 1.88 Å: Shannon ionic radii, coordination XII, read from pymatgen (`Species.get_shannon_radius`).
+  The dataset set uses 1.51 / 1.61 / 1.74 Å (coordination VIII).
+- Ge 0.73, Ca 1.00, Pb 1.19, Sr 1.18, Ba 1.35 Å: Shannon ionic radii, coordination VI (pymatgen). The dataset set uses
+  Ge 0.87 (the coordination-VI crystal radius), Sr 1.26 and Ba 1.42 Å (coordination VIII).
+- Cl 1.81, Br 1.96, I 2.20 Å: Shannon ionic radii, coordination VI (pymatgen). Identical to the dataset set.
+- MA 2.17 and FA 2.53 Å: effective radii of Kieslich, Sun, Cheetham, Chem. Sci. 2014, 5, 4712, as quoted
+  (217 pm and 253 pm) in Kieslich et al., Chem. Sci. 2015, 6, 3430 (read via Europe PMC, PMC5492664). These are the SAME
+  values as in the dataset set. The 2014 paper itself could not be read (RSC HTTP 403; not in Europe PMC).
+- Sn2+ 1.15 Å: NOT changed. pymatgen's Shannon table has no Sn2+ entry, and Travis et al. 2016 (which proposes revised
+  B2+ radii) could not be read (RSC 403; the Europe PMC full text returned HTTP 500). So Sn keeps the dataset value,
+  and its source remains unknown.
+
+**R1. CONFIRMED. The main conclusions of stage 5 survive the second radii set; the geometry-only numbers do not.**
+(`tables/fig21_second_radii_comparison.csv`, fig21 panels e, f)
+
+| quantity (HSE-PBE-SOC, clean leave-one-B-out average MAE, eV) | dataset radii | Shannon radii | change |
+|---|---|---|---|
+| geometry only, RF | 1.847 | 3.025 | +1.178 |
+| geometry only, Ridge | 2.126 | 2.350 | +0.224 |
+| geometry + Z, RF | 1.954 | 2.839 | +0.885 |
+| geometry + Z, Ridge | 1.725 | 1.488 | -0.237 |
+| geometry + electronic, RF | 0.447 | 0.452 | +0.005 |
+| geometry + electronic, Ridge | 0.698 | 1.045 | +0.347 |
+| + g14_flag only, RF | 0.361 | 0.306 | -0.055 |
+| + g14_flag only, Ridge | 0.343 | 0.341 | -0.002 |
+| + EN_B only, RF / Ridge | 0.420 / 0.811 | 0.375 / 0.862 | -0.045 / +0.051 |
+| mean baseline | 2.059 | 2.059 | 0 |
+
+What survives: (i) geometry alone never beats the mean baseline in a useful way (with Shannon radii RF is even worse,
+3.03 eV against 2.06); (ii) adding only g14_flag does at least as well as all electronic descriptors (RF 0.31 versus 0.45;
+Ridge 0.34 versus 1.05); (iii) leave-one-group-out still fails in both directions. G14 -> G2: RF 3.54-3.67, Ridge
+3.67-4.64 eV. G2 -> G14: RF 3.30-3.56, Ridge 1.72-3.69 eV (every value in the comparison table).
+What changes: the size of the geometry-only and Ridge numbers, which depend on how the radii place Ge, Sr and Ba
+relative to the other elements. They are therefore NOT robust numbers.
+- Tolerance/octahedral analyses (Pearson r with the HSE-PBE-SOC gap, dataset -> Shannon). t: strict Group 14 0.78 -> 0.73,
+  strict Group 2 0.43 -> 0.45, all 0.01 -> -0.01. mu: Group 14 0.00 -> -0.09, Group 2 0.25 -> 0.32, all 0.41 -> 0.36.
+  Bartel tau: Group 14 -0.58 -> -0.36, Group 2 -0.30 -> -0.46, all 0.15 -> -0.06. rX is unchanged (same halide radii).
+  The t correlation inside Group 14 is robust. The tau correlations are not: they change by up to 0.22.
+- Counts over 490 compounds: tau < 4.18: 230 -> 263; 0.8 <= t <= 1.0: 328 -> 386. Mean t 0.879 -> 0.910; mean mu 0.579 -> 0.556.
 
 ## F. Cross-fidelity (stage 6)
 
@@ -338,7 +382,8 @@ leave-one-B-out number (item 7), all quoted dataset values (item 6).
 
 1. RESOLVED in session 2 through the arXiv version (see "Dataset paper checks"). Still open: the size of the experimental
    set behind the paper's Table 2, and which 7 PBE compounds are missing from the public file.
-2. No second radii set was supplied, so robustness test (1) was skipped.
+2. Second radii set: done in session 2 (Shannon CN12/CN6). Still open: a documented Sn2+ radius (none in pymatgen;
+   Travis et al. 2016 not readable here), and a check of Kieslich 2014 itself for MA/FA.
 3. Experimental comparison is DRAFT only (v1: section 9 values; v2: candidate literature values), until the student
    creates `experimental/experimental_verified.csv` after checking the candidates in the primary papers.
 4. Cause of the 41 equal_flag rows is unknown. A question for the dataset authors.

@@ -1,64 +1,43 @@
-feature_set,model,held_out,MAE_low_95_eV,MAE_high_95_eV
-geometry only,mean baseline,Ge,1.298,1.857
-geometry only,mean baseline,Sn,2.016,2.539
-geometry only,mean baseline,Pb,1.86,2.214
-geometry only,mean baseline,Ca,2.129,2.871
-geometry only,mean baseline,Sr,1.68,2.312
-geometry only,mean baseline,Ba,1.668,2.244
-geometry only,mean baseline,average,1.944,2.17
-geometry only,RandomForest,Ge,2.721,3.469
-geometry only,RandomForest,Sn,1.404,1.78
-geometry only,RandomForest,Pb,0.331,0.599
-geometry only,RandomForest,Ca,3.097,3.665
-geometry only,RandomForest,Sr,1.685,2.178
-geometry only,RandomForest,Ba,0.465,0.737
-geometry only,RandomForest,average,1.748,1.945
-geometry only,Ridge,Ge,1.099,1.693
-geometry only,Ridge,Sn,2.12,2.53
-geometry only,Ridge,Pb,2.052,2.336
-geometry only,Ridge,Ca,3.341,3.712
-geometry only,Ridge,Sr,1.686,1.913
-geometry only,Ridge,Ba,1.431,1.603
-geometry only,Ridge,average,2.052,2.192
-geometry + Z,mean baseline,Ge,1.298,1.857
-geometry + Z,mean baseline,Sn,2.016,2.539
-geometry + Z,mean baseline,Pb,1.86,2.214
-geometry + Z,mean baseline,Ca,2.129,2.871
-geometry + Z,mean baseline,Sr,1.68,2.312
-geometry + Z,mean baseline,Ba,1.668,2.244
-geometry + Z,mean baseline,average,1.944,2.17
-geometry + Z,RandomForest,Ge,2.818,3.568
-geometry + Z,RandomForest,Sn,2.191,2.629
-geometry + Z,RandomForest,Pb,0.153,0.293
-geometry + Z,RandomForest,Ca,3.091,3.647
-geometry + Z,RandomForest,Sr,1.434,1.94
-geometry + Z,RandomForest,Ba,0.688,1.047
-geometry + Z,RandomForest,average,1.864,2.045
-geometry + Z,Ridge,Ge,0.588,1.094
-geometry + Z,Ridge,Sn,1.95,2.254
-geometry + Z,Ridge,Pb,4.662,4.918
-geometry + Z,Ridge,Ca,1.89,2.28
-geometry + Z,Ridge,Sr,0.223,0.38
-geometry + Z,Ridge,Ba,0.201,0.337
-geometry + Z,Ridge,average,1.666,1.787
-geometry + electronic,mean baseline,Ge,1.298,1.857
-geometry + electronic,mean baseline,Sn,2.016,2.539
-geometry + electronic,mean baseline,Pb,1.86,2.214
-geometry + electronic,mean baseline,Ca,2.129,2.871
-geometry + electronic,mean baseline,Sr,1.68,2.312
-geometry + electronic,mean baseline,Ba,1.668,2.244
-geometry + electronic,mean baseline,average,1.944,2.17
-geometry + electronic,RandomForest,Ge,0.39,0.873
-geometry + electronic,RandomForest,Sn,0.595,0.802
-geometry + electronic,RandomForest,Pb,0.416,0.621
-geometry + electronic,RandomForest,Ca,0.369,0.6
-geometry + electronic,RandomForest,Sr,0.114,0.212
-geometry + electronic,RandomForest,Ba,0.125,0.264
-geometry + electronic,RandomForest,average,0.39,0.503
-geometry + electronic,Ridge,Ge,0.393,0.684
-geometry + electronic,Ridge,Sn,0.555,0.859
-geometry + electronic,Ridge,Pb,1.514,1.769
-geometry + electronic,Ridge,Ca,0.268,0.552
-geometry + electronic,Ridge,Sr,0.386,0.632
-geometry + electronic,Ridge,Ba,0.307,0.497
-geometry + electronic,Ridge,average,0.649,0.755
+feature_set,model,held_out,MAE_eV,MAE_low_95_eV,MAE_high_95_eV,bootstrap_std_eV
+geometry only,RandomForest,Ge,3.079,2.724,3.443,0.186
+geometry only,RandomForest,Sn,1.607,1.411,1.787,0.097
+geometry only,RandomForest,Pb,0.469,0.336,0.609,0.07
+geometry only,RandomForest,Ca,3.388,3.091,3.667,0.15
+geometry only,RandomForest,Sr,1.941,1.64,2.201,0.142
+geometry only,RandomForest,Ba,0.599,0.453,0.731,0.071
+geometry only,RandomForest,average,1.847,1.749,1.954,0.052
+geometry only,Ridge,Ge,1.392,1.107,1.694,0.149
+geometry only,Ridge,Sn,2.317,2.116,2.517,0.105
+geometry only,Ridge,Pb,2.208,2.083,2.334,0.066
+geometry only,Ridge,Ca,3.531,3.343,3.716,0.097
+geometry only,Ridge,Sr,1.792,1.676,1.91,0.058
+geometry only,Ridge,Ba,1.514,1.432,1.594,0.041
+geometry only,Ridge,average,2.126,2.05,2.201,0.038
++ g14_flag only,RandomForest,Ge,0.624,0.413,0.87,0.117
++ g14_flag only,RandomForest,Sn,0.461,0.4,0.513,0.029
++ g14_flag only,RandomForest,Pb,0.379,0.299,0.463,0.043
++ g14_flag only,RandomForest,Ca,0.392,0.259,0.53,0.069
++ g14_flag only,RandomForest,Sr,0.162,0.094,0.236,0.037
++ g14_flag only,RandomForest,Ba,0.149,0.106,0.192,0.022
++ g14_flag only,RandomForest,average,0.361,0.314,0.41,0.025
++ g14_flag only,Ridge,Ge,0.548,0.415,0.686,0.069
++ g14_flag only,Ridge,Sn,0.386,0.284,0.49,0.054
++ g14_flag only,Ridge,Pb,0.309,0.208,0.408,0.05
++ g14_flag only,Ridge,Ca,0.426,0.324,0.54,0.056
++ g14_flag only,Ridge,Sr,0.204,0.12,0.296,0.045
++ g14_flag only,Ridge,Ba,0.186,0.125,0.246,0.032
++ g14_flag only,Ridge,average,0.343,0.304,0.387,0.021
++ all electronic,RandomForest,Ge,0.62,0.39,0.881,0.123
++ all electronic,RandomForest,Sn,0.711,0.591,0.809,0.056
++ all electronic,RandomForest,Pb,0.517,0.407,0.623,0.054
++ all electronic,RandomForest,Ca,0.484,0.379,0.597,0.056
++ all electronic,RandomForest,Sr,0.162,0.114,0.216,0.027
++ all electronic,RandomForest,Ba,0.185,0.117,0.261,0.037
++ all electronic,RandomForest,average,0.447,0.389,0.501,0.028
++ all electronic,Ridge,Ge,0.545,0.407,0.678,0.07
++ all electronic,Ridge,Sn,0.696,0.545,0.842,0.078
++ all electronic,Ridge,Pb,1.634,1.514,1.761,0.063
++ all electronic,Ridge,Ca,0.412,0.285,0.556,0.07
++ all electronic,Ridge,Sr,0.495,0.384,0.62,0.062
++ all electronic,Ridge,Ba,0.406,0.306,0.494,0.048
++ all electronic,Ridge,average,0.698,0.648,0.755,0.027

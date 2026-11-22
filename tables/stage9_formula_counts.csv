@@ -1,0 +1,8 @@
+formula,times_chosen_in_25_folds
+rA + rB + tolerance,8
+octahedral + tolerance + IE_B,7
+frac_Sn + organic_frac + Z_X,4
+tolerance + Z_X + EN_B,3
+organic_frac + octahedral + IE_B,1
+frac_Sn + rA + Z_X,1
+tolerance + Z_X + dEN,1

@@ -1,31 +1,31 @@
 seed,feature_set,average_MAE_eV
 0,geometry only,1.8473
-0,geometry + Z,1.9543
-0,geometry + electronic,0.4466
+0,+ g14_flag only,0.3611
+0,+ all electronic,0.4466
 1,geometry only,1.8742
-1,geometry + Z,1.9232
-1,geometry + electronic,0.4632
+1,+ g14_flag only,0.353
+1,+ all electronic,0.4632
 2,geometry only,1.8494
-2,geometry + Z,1.9256
-2,geometry + electronic,0.454
+2,+ g14_flag only,0.3501
+2,+ all electronic,0.454
 3,geometry only,1.8794
-3,geometry + Z,1.9257
-3,geometry + electronic,0.456
+3,+ g14_flag only,0.3603
+3,+ all electronic,0.456
 4,geometry only,1.8791
-4,geometry + Z,1.9136
-4,geometry + electronic,0.4578
+4,+ g14_flag only,0.3644
+4,+ all electronic,0.4578
 5,geometry only,1.8751
-5,geometry + Z,1.9248
-5,geometry + electronic,0.4536
+5,+ g14_flag only,0.348
+5,+ all electronic,0.4536
 6,geometry only,1.8731
-6,geometry + Z,1.9572
-6,geometry + electronic,0.4556
+6,+ g14_flag only,0.3627
+6,+ all electronic,0.4556
 7,geometry only,1.8712
-7,geometry + Z,1.9266
-7,geometry + electronic,0.4493
+7,+ g14_flag only,0.3607
+7,+ all electronic,0.4493
 8,geometry only,1.8538
-8,geometry + Z,1.9156
-8,geometry + electronic,0.4544
+8,+ g14_flag only,0.3563
+8,+ all electronic,0.4544
 9,geometry only,1.892
-9,geometry + Z,1.9832
-9,geometry + electronic,0.4564
+9,+ g14_flag only,0.3498
+9,+ all electronic,0.4564
