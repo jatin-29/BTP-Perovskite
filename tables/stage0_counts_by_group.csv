@@ -1,0 +1,4 @@
+strict_group,n_all,n_PBE,n_HSErel,n_HSErel_SOC,n_HSE_PBE_SOC
+Group 14,180,178,88,82,76
+Group 2,187,187,94,89,77
+mixed B,123,123,117,111,91

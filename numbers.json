@@ -1,0 +1,77 @@
+{
+ "n_compounds": {
+  "value": 490,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "n_pure": {
+  "value": 90,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "coverage_PBE": {
+  "value": 488,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "coverage_HSErel": {
+  "value": 299,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "coverage_HSErel_SOC": {
+  "value": 282,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "coverage_HSE-PBE-SOC": {
+  "value": 244,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "n_equal_flag": {
+  "value": 41,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "n_failed_checks": {
+  "value": 0,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "max_abs_diff_tolerance": {
+  "value": 0.0,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "max_abs_diff_octahedral": {
+  "value": 0.0,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "max_abs_diff_bartel_term": {
+  "value": 0.0,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "n_bartel_tau_below_4p18": {
+  "value": 230,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "n_HSE_PBE_SOC_Group_14": {
+  "value": 76,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "n_HSE_PBE_SOC_Group_2": {
+  "value": 77,
+  "stage": "stage 0",
+  "note": ""
+ },
+ "n_HSE_PBE_SOC_mixed_B": {
+  "value": 91,
+  "stage": "stage 0",
+  "note": ""
+ }
+}
