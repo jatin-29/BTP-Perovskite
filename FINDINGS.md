@@ -292,6 +292,37 @@ relative to the other elements. They are therefore NOT robust numbers.
   The t correlation inside Group 14 is robust. The tau correlations are not: they change by up to 0.22.
 - Counts over 490 compounds: tau < 4.18: 230 -> 263; 0.8 <= t <= 1.0: 328 -> 386. Mean t 0.879 -> 0.910; mean mu 0.579 -> 0.556.
 
+## Suspicious rows: sensitivity (session 2, stage 8 part 5)
+
+No row was deleted from the data. Each group of suspicious rows was left out in turn and the key results of stages 3, 4
+and 5 were recomputed (HSE-PBE-SOC target; `tables/stage8_suspicious_rows_sensitivity.csv`). Rows in each scenario:
+MASrI3 1 (it has an HSE-PBE-SOC gap), RbGeBr1.125Cl1.875 1, equal_flag 41, all together 43.
+
+**S1. CONFIRMED. No headline conclusion depends on these rows; three numbers move by more than 0.05.**
+
+| quantity | all rows | without MASrI3 | without RbGeBr1.125Cl1.875 | without 41 equal_flag | without all 43 |
+|---|---|---|---|---|---|
+| n rows (HSE-PBE-SOC) | 244 | 243 | 243 | 203 | 201 |
+| eta2 A site | 0.015 | 0.015 | 0.014 | 0.108 | 0.105 |
+| eta2 X site | 0.125 | 0.129 | 0.132 | 0.126 | 0.139 |
+| eta2 B element | 0.659 | 0.658 | 0.659 | 0.621 | 0.619 |
+| eta2 B group (g2_frac) | 0.731 | 0.731 | 0.730 | 0.700 | 0.698 |
+| strict G14 linear grouped R2 | 0.738 | 0.738 | 0.780 | 0.738 | 0.780 |
+| strict G14 products Ridge, nested grouped R2 | 0.864 | 0.864 | 0.874 | 0.864 | 0.874 |
+| coefficient MA / FA / I / Ge (eV) | 0.820 / 1.190 / -0.958 / 0.223 | same | 0.821 / 1.188 / -0.972 / 0.239 | same as all | 0.821 / 1.188 / -0.972 / 0.239 |
+| LOBO avg MAE, geometry only, RF / Ridge | 1.847 / 2.126 | 1.875 / 2.130 | 1.853 / 2.129 | 1.867 / 1.957 | 1.851 / 1.976 |
+| LOBO avg MAE, + g14_flag only, RF / Ridge | 0.361 / 0.343 | 0.367 / 0.345 | 0.361 / 0.343 | 0.359 / 0.354 | 0.384 / 0.357 |
+| LOBO avg MAE, + all electronic, RF / Ridge | 0.447 / 0.698 | 0.451 / 0.698 | 0.457 / 0.695 | 0.501 / 0.729 | 0.510 / 0.728 |
+| leave-one-group-out MAE, RF geom + elec, G14->G2 / G2->G14 | 3.663 / 3.282 | 3.670 / 3.312 | 3.669 / 3.277 | 3.489 / 3.325 | 3.505 / 3.269 |
+
+- Changes above 0.05: the A-site eta2 (+0.09 without the equal_flag rows); strict G14 linear grouped R2 (+0.042 without
+  RbGeBr1.125Cl1.875, just under 0.05, but this single row moves the score most); Ridge geometry-only LOBO (-0.17 without
+  equal_flag); RF geometry + electronic LOBO (+0.054 without equal_flag); leave-one-group-out G14 -> G2 (-0.17 without
+  equal_flag, still about 3.5 eV).
+- The ordering g14_flag <= all electronic << geometry only holds in every scenario, and leave-one-group-out fails in every scenario.
+- Text the student could send to the dataset authors: `data_issues_for_authors.md` (7 neutral observations, including these
+  three issues, the 495-vs-488 count and the four Table SII rows).
+
 ## F. Cross-fidelity (stage 6)
 
 **F1. CONFIRMED. PBE plus simple descriptors predicts HSE-PBE-SOC well under clean leave-one-B-out** (average MAE,
