@@ -1,0 +1,22 @@
+target,approach,n_rows,average_MAE_eV,MAE_Ge,MAE_Sn,MAE_Pb,MAE_Ca,MAE_Sr,MAE_Ba
+HSE-PBE-SOC,PBE gap as is,243,0.737,0.59,0.347,0.306,1.114,1.025,1.043
+HSE-PBE-SOC,mean baseline,243,2.054,1.556,2.309,2.045,2.498,1.974,1.946
+HSE-PBE-SOC,linear on PBE,243,0.405,0.561,0.396,0.881,0.213,0.19,0.188
+HSE-PBE-SOC,linear on PBE + g2_frac,243,0.433,0.661,0.366,0.945,0.253,0.2,0.172
+HSE-PBE-SOC,Ridge on PBE + geometry + electronic,243,0.173,0.237,0.119,0.248,0.148,0.106,0.181
+HSE-PBE-SOC,RF on PBE + geometry + electronic,243,0.35,0.425,0.328,0.909,0.228,0.062,0.148
+HSE-PBE-SOC,RF on geometry + electronic (no PBE),243,0.457,0.642,0.749,0.51,0.496,0.163,0.183
+HSErel_SOC,PBE gap as is,281,1.033,1.028,1.268,0.555,1.18,1.062,1.106
+HSErel_SOC,mean baseline,281,1.669,1.436,1.484,1.721,2.152,1.603,1.621
+HSErel_SOC,linear on PBE,281,0.476,0.453,0.919,0.696,0.305,0.275,0.21
+HSErel_SOC,linear on PBE + g2_frac,281,0.521,0.463,0.919,0.961,0.302,0.269,0.211
+HSErel_SOC,Ridge on PBE + geometry + electronic,281,0.44,0.354,0.685,0.883,0.36,0.183,0.172
+HSErel_SOC,RF on PBE + geometry + electronic,281,0.414,0.261,0.617,0.873,0.423,0.144,0.166
+HSErel_SOC,RF on geometry + electronic (no PBE),281,0.427,0.402,0.653,0.357,0.749,0.175,0.223
+HSErel,PBE gap as is,297,1.252,1.115,1.551,1.158,1.289,1.182,1.216
+HSErel,mean baseline,297,1.515,1.638,1.571,1.013,1.958,1.477,1.433
+HSErel,linear on PBE,297,0.323,0.297,0.721,0.337,0.223,0.206,0.156
+HSErel,linear on PBE + g2_frac,297,0.308,0.256,0.702,0.343,0.215,0.189,0.141
+HSErel,Ridge on PBE + geometry + electronic,297,0.385,0.437,0.657,0.314,0.601,0.174,0.127
+HSErel,RF on PBE + geometry + electronic,297,0.34,0.531,0.696,0.255,0.26,0.151,0.145
+HSErel,RF on geometry + electronic (no PBE),297,0.565,0.618,0.814,0.566,0.972,0.211,0.21

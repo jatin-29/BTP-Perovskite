@@ -1,0 +1,10 @@
+term,coefficient_eV,row_boot_low_eV,row_boot_high_eV,group_boot_low_eV,group_boot_high_eV,row_interval_includes_zero,group_interval_includes_zero,earlier_eV,difference_vs_earlier
+intercept (CsPbCl3-like),1.777,1.623,1.939,1.568,1.963,False,False,1.78,-0.003
+K,-0.112,-0.315,0.071,-0.284,0.111,True,True,-0.11,-0.002
+Rb,-0.106,-0.264,0.051,-0.282,0.122,True,True,-0.11,0.004
+MA,0.82,0.667,0.996,0.614,0.997,False,False,0.82,-0.0
+FA,1.19,0.893,1.54,0.797,1.653,False,False,1.19,0.0
+Br,-0.464,-0.668,-0.288,-0.679,-0.216,False,False,-0.46,-0.004
+I,-0.958,-1.143,-0.793,-1.183,-0.743,False,False,-0.96,0.002
+Ge,0.223,0.028,0.429,-0.043,0.474,False,True,0.22,0.003
+Sn,-0.321,-0.474,-0.158,-0.502,-0.135,False,False,-0.32,-0.001

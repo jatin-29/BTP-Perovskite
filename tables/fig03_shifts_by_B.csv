@@ -1,0 +1,15 @@
+shift,B_category,n,mean_eV,std_eV,min_eV,max_eV
+hybrid_shift,Ge,21,0.59,0.173,0.292,0.909
+hybrid_shift,Sn,24,0.347,0.148,0.116,0.643
+hybrid_shift,Pb,22,-0.306,0.129,-0.548,-0.078
+hybrid_shift,Ca,25,1.114,0.242,0.739,1.572
+hybrid_shift,Sr,22,1.025,0.239,0.743,1.417
+hybrid_shift,Ba,19,1.043,0.213,0.735,1.367
+hybrid_shift,mixed B site,110,0.405,0.377,-0.305,1.583
+soc_shift,Ge,22,-0.084,0.058,-0.206,-0.009
+soc_shift,Sn,26,-0.201,0.098,-0.352,-0.063
+soc_shift,Pb,25,-0.843,0.213,-1.157,-0.595
+soc_shift,Ca,31,-0.106,0.082,-0.226,-0.002
+soc_shift,Sr,25,-0.111,0.077,-0.224,-0.003
+soc_shift,Ba,22,-0.111,0.076,-0.221,-0.004
+soc_shift,mixed B site,131,-0.357,0.276,-1.033,-0.001

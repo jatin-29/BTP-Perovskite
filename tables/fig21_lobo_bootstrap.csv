@@ -1,0 +1,64 @@
+feature_set,model,held_out,MAE_low_95_eV,MAE_high_95_eV
+geometry only,mean baseline,Ge,1.298,1.857
+geometry only,mean baseline,Sn,2.016,2.539
+geometry only,mean baseline,Pb,1.86,2.214
+geometry only,mean baseline,Ca,2.129,2.871
+geometry only,mean baseline,Sr,1.68,2.312
+geometry only,mean baseline,Ba,1.668,2.244
+geometry only,mean baseline,average,1.944,2.17
+geometry only,RandomForest,Ge,2.721,3.469
+geometry only,RandomForest,Sn,1.404,1.78
+geometry only,RandomForest,Pb,0.331,0.599
+geometry only,RandomForest,Ca,3.097,3.665
+geometry only,RandomForest,Sr,1.685,2.178
+geometry only,RandomForest,Ba,0.465,0.737
+geometry only,RandomForest,average,1.748,1.945
+geometry only,Ridge,Ge,1.099,1.693
+geometry only,Ridge,Sn,2.12,2.53
+geometry only,Ridge,Pb,2.052,2.336
+geometry only,Ridge,Ca,3.341,3.712
+geometry only,Ridge,Sr,1.686,1.913
+geometry only,Ridge,Ba,1.431,1.603
+geometry only,Ridge,average,2.052,2.192
+geometry + Z,mean baseline,Ge,1.298,1.857
+geometry + Z,mean baseline,Sn,2.016,2.539
+geometry + Z,mean baseline,Pb,1.86,2.214
+geometry + Z,mean baseline,Ca,2.129,2.871
+geometry + Z,mean baseline,Sr,1.68,2.312
+geometry + Z,mean baseline,Ba,1.668,2.244
+geometry + Z,mean baseline,average,1.944,2.17
+geometry + Z,RandomForest,Ge,2.818,3.568
+geometry + Z,RandomForest,Sn,2.191,2.629
+geometry + Z,RandomForest,Pb,0.153,0.293
+geometry + Z,RandomForest,Ca,3.091,3.647
+geometry + Z,RandomForest,Sr,1.434,1.94
+geometry + Z,RandomForest,Ba,0.688,1.047
+geometry + Z,RandomForest,average,1.864,2.045
+geometry + Z,Ridge,Ge,0.588,1.094
+geometry + Z,Ridge,Sn,1.95,2.254
+geometry + Z,Ridge,Pb,4.662,4.918
+geometry + Z,Ridge,Ca,1.89,2.28
+geometry + Z,Ridge,Sr,0.223,0.38
+geometry + Z,Ridge,Ba,0.201,0.337
+geometry + Z,Ridge,average,1.666,1.787
+geometry + electronic,mean baseline,Ge,1.298,1.857
+geometry + electronic,mean baseline,Sn,2.016,2.539
+geometry + electronic,mean baseline,Pb,1.86,2.214
+geometry + electronic,mean baseline,Ca,2.129,2.871
+geometry + electronic,mean baseline,Sr,1.68,2.312
+geometry + electronic,mean baseline,Ba,1.668,2.244
+geometry + electronic,mean baseline,average,1.944,2.17
+geometry + electronic,RandomForest,Ge,0.39,0.873
+geometry + electronic,RandomForest,Sn,0.595,0.802
+geometry + electronic,RandomForest,Pb,0.416,0.621
+geometry + electronic,RandomForest,Ca,0.369,0.6
+geometry + electronic,RandomForest,Sr,0.114,0.212
+geometry + electronic,RandomForest,Ba,0.125,0.264
+geometry + electronic,RandomForest,average,0.39,0.503
+geometry + electronic,Ridge,Ge,0.393,0.684
+geometry + electronic,Ridge,Sn,0.555,0.859
+geometry + electronic,Ridge,Pb,1.514,1.769
+geometry + electronic,Ridge,Ca,0.268,0.552
+geometry + electronic,Ridge,Sr,0.386,0.632
+geometry + electronic,Ridge,Ba,0.307,0.497
+geometry + electronic,Ridge,average,0.649,0.755

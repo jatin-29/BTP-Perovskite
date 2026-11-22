@@ -1,0 +1,4 @@
+model,grouped_R2,grouped_MAE_eV,note
+8-term linear fractions (stage 4),0.738,0.285,fixed model
+"best <=3-term formula, nested",0.749,0.267,honest: formula chosen inside training folds
+best <=3-term formula chosen on all rows: gap = -20.251 +7.231 * octahedral +6.284 * tolerance +0.540 * IE_B,0.805,0.233,optimistic: the choice saw all rows

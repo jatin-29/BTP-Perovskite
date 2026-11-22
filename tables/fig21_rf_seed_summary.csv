@@ -1,0 +1,4 @@
+feature_set,mean,std,min,max
+geometry only,1.869,0.015,1.847,1.892
+geometry + Z,1.935,0.022,1.914,1.983
+geometry + electronic,0.455,0.005,0.447,0.463

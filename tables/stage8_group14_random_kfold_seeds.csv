@@ -1,0 +1,4 @@
+model,mean,min,max
+linear (fractions),0.762,0.739,0.794
+products Ridge alpha=1,0.876,0.684,0.923
+products Ridge alpha=10,0.837,0.706,0.888

@@ -1,0 +1,14 @@
+term,without_deviation_eV,with_deviation_eV
+K,-0.111,-0.078
+Rb,-0.083,-0.076
+MA,0.821,0.254
+FA,1.188,-0.37
+Br,-0.472,-0.497
+I,-0.972,-0.85
+Ge,0.239,-0.153
+Sn,-0.321,-0.43
+dev_b,,6.01
+dev_c,,4.796
+dev_alpha,,3.61
+dev_beta,,11.912
+dev_gamma,,8.491

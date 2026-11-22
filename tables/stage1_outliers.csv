@@ -1,0 +1,17 @@
+difference,Formula,B_category,gap_PBE,gap_HSErel,gap_HSErel_SOC,gap_HSE_PBE_SOC,difference_eV,robust_z
+HSE-PBE-SOC minus PBE,FACa_0.5Sr_0.5Cl_3,mixed B site,4.465,6.124,6.12,6.04,1.575,3.796
+HSE-PBE-SOC minus PBE,FASr_0.5Ba_0.5Cl_3,mixed B site,4.312,6.236,6.233,5.895,1.583,3.821
+HSErel minus PBE,FABa_0.125Ge_0.125Sn_0.75I_3,mixed B site,1.257,2.772,2.633,,1.516,3.49
+HSErel minus PBE,FACa_0.5Sr_0.5Cl_3,mixed B site,4.465,6.124,6.12,6.04,1.659,4.21
+HSErel minus PBE,FAGe_0.5Pb_0.5Br_3,mixed B site,2.021,3.761,3.426,,1.74,4.613
+HSErel minus PBE,FASr_0.125Ba_0.125Ge_0.125Sn_0.25Pb_0.375Cl_3,mixed B site,2.459,4.203,3.744,2.86,1.744,4.636
+HSErel minus PBE,FASr_0.5Ba_0.5Cl_3,mixed B site,4.312,6.236,6.233,5.895,1.924,5.537
+HSErel minus PBE,MABa_0.125Sn_0.875I_3,mixed B site,1.111,2.582,2.407,1.411,1.472,3.269
+HSErel minus PBE,MACa_0.125Sn_0.5Pb_0.375Cl_3,mixed B site,2.008,3.581,3.06,2.231,1.573,3.777
+HSErel minus PBE,MACa_0.125Sn_0.75Pb_0.125I_3,mixed B site,1.038,2.676,2.379,1.226,1.638,4.106
+HSErel minus PBE,MACa_0.125Sn_0.875I_3,mixed B site,0.992,2.892,2.777,1.273,1.9,5.419
+HSErel minus PBE,MASrI_3,Sr,3.763,3.465,3.406,4.572,-0.298,-5.538
+HSErel_SOC minus PBE,FACa_0.5Sr_0.5Cl_3,mixed B site,4.465,6.124,6.12,6.04,1.655,3.312
+HSErel_SOC minus PBE,FASr_0.5Ba_0.5Cl_3,mixed B site,4.312,6.236,6.233,5.895,1.921,4.016
+HSErel_SOC minus PBE,MACa_0.125Sn_0.875I_3,mixed B site,0.992,2.892,2.777,1.273,1.785,3.658
+HSErel_SOC minus PBE,MASrI_3,Sr,3.763,3.465,3.406,4.572,-0.357,-3.594

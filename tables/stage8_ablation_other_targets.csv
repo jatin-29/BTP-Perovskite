@@ -1,0 +1,9 @@
+target,feature_set,model,average_MAE_eV
+PBE,+ g14_flag only,RandomForest,0.455
+PBE,+ g14_flag only,Ridge,0.549
+PBE,+ all electronic,RandomForest,0.527
+PBE,+ all electronic,Ridge,0.808
+HSErel_SOC,+ g14_flag only,RandomForest,0.392
+HSErel_SOC,+ g14_flag only,Ridge,0.514
+HSErel_SOC,+ all electronic,RandomForest,0.455
+HSErel_SOC,+ all electronic,Ridge,0.717

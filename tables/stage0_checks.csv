@@ -1,0 +1,17 @@
+check,observed,expected,passed
+compounds after outer merge,490,490,True
+pure compounds,90,90,True
+PBE gap coverage,488,488,True
+HSErel gap coverage,299,299,True
+HSErel_SOC gap coverage,282,282,True
+HSE-PBE-SOC gap coverage,244,244,True
+compounds without a PBE gap,2,2,True
+compounds without PBE gap that are mixed,2,2,True
+rows with both SOC levels,244,244,True
+rows with equal HSErel_SOC and HSE-PBE-SOC,41,41,True
+equal rows in strict Group 14,0,0,True
+A-site species,"['Cs', 'Fa', 'K', 'Ma', 'Rb']","['Cs', 'Fa', 'K', 'Ma', 'Rb']",True
+B-site species,"['Ba', 'Ca', 'Ge', 'Pb', 'Sn', 'Sr']","['Ba', 'Ca', 'Ge', 'Pb', 'Sn', 'Sr']",True
+X-site species,"['Br', 'Cl', 'I']","['Br', 'Cl', 'I']",True
+parse errors,0,0,True
+FAPbI3 and FAPbCl3 have no HSE-PBE-SOC gap,True,True,True
