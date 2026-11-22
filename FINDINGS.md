@@ -269,17 +269,51 @@ HSErel_SOC 27/29. The violations are MAGe and MASn at HSErel and HSErel_SOC (ite
 
 ## G. Experiment (stage 7)
 
-**G1. NOT AVAILABLE (DRAFT only).** `experimental/experimental_verified.csv` does not exist. `experimental_template.csv`
-was written (90 pure compounds, dataset gaps filled, experimental columns empty). The stage ran on the approximate
-section 9 item 8 values. Every figure is stamped "DRAFT, unverified experimental values".
-How the DRAFT values were made: ranges were replaced by their midpoints (Pb bromides 2.25, MAPbCl3 3.0), and "Pb iodides
-about 1.6" and "Pb bromides" were applied to the Cs, MA and FA compounds only.
-DRAFT numbers, for orientation only: HSE-PBE-SOC n=11, MAE 0.45, mean error -0.45 eV (Cs -0.73, n=3; organic -0.34, n=8);
-PBE n=13, MAE 0.48; HSErel_SOC n=13, MAE 0.57, mean error +0.28 eV.
-**HYPOTHESIS (not tested):** forced-cubic small A cations give gaps that are too small. This needs verified values.
-**Not verified:** the claim that the source paper reports about 0.70 eV RMSE for HSE-PBE-SOC against experiment and
-that HSErel is the worst level (section 9 item 9). The paper's web page refused automated access (HTTP 403), and
-`papers/` does not contain the dataset paper.
+**G1. DRAFT v1 (session 1).** `experimental/experimental_verified.csv` still does not exist. The stage ran on the
+approximate section 9 item 8 values; every figure is stamped "DRAFT, unverified experimental values". Ranges were
+replaced by their midpoints, and "Pb iodides/bromides" were applied to the Cs, MA and FA compounds only. DRAFT v1 numbers,
+HSE-PBE-SOC: n=11, MAE 0.45, mean error -0.45 eV (Cs -0.73, n=3; organic -0.34, n=8).
+
+**G2. DRAFT v2 (session 2): candidate literature values, NOT verified** (`experimental/experimental_candidates.csv`,
+status "candidate, student must verify"; figure `fig19_vs_experiment_candidates.png`, stamped "DRAFT, candidate
+experimental values (not verified)"; tables `fig19_vs_experiment_candidates_*.csv`).
+- 23 rows for the 18 compounds. One value per compound is selected for the analysis: room temperature, perovskite phase,
+  single crystal preferred over powder over film. Each row gives method, phase, temperature, sample type, reference,
+  DOI, location in the paper and how it was read.
+- How the values were read. Publisher pages (ACS, RSC, Science) refused automated access (HTTP 403), so the values come from:
+  (i) the HybriD3 experimental database at Duke University, which stores each value with its primary reference, method,
+  phase and in-paper location (downloaded dataset files); (ii) abstracts via Europe PMC and OpenAlex;
+  (iii) open-access full texts (arXiv, Nature Communications, OSTI accepted manuscript, Springer Open).
+  Values taken from the database were NOT checked in the paper itself. The student must check each one in the primary paper.
+- Phase classes of the 18 selected values: cubic 5, non-cubic 8, unknown 5. Several phases are only "as recorded" by the database.
+- Results (dataset minus experiment; all 18 selected compounds, 16 at HSE-PBE-SOC because FAPbI3 and FAPbCl3 have no value there):
+
+| level | n | MAE (eV) | RMSE (eV) | mean signed error (eV) | paper Table 2 RMSE (eV) |
+|---|---|---|---|---|---|
+| PBE | 18 | 0.627 | 0.761 | -0.539 | 0.78 |
+| HSErel | 18 | 0.849 | 0.968 | +0.624 | 0.93 |
+| HSErel_SOC | 18 | 0.723 | 0.811 | +0.094 | 0.74 |
+| HSE-PBE-SOC | 16 | 0.559 | 0.696 | -0.558 | 0.70 |
+
+  The paper's Table 2 RMSEs are for an unknown set of compounds, so the agreement in size is not a check of the same numbers.
+- Split by A site, mean signed error (eV), Cs (n=7) / organic MA, FA (n=11; 9 at HSE-PBE-SOC): PBE -0.92 / -0.30;
+  HSErel -0.17 / +1.13; HSErel_SOC -0.81 / +0.67; HSE-PBE-SOC -0.93 / -0.27.
+- Split by halide, HSE-PBE-SOC mean signed error: Cl -1.06 (n=3), Br -0.62 (n=5), I -0.33 (n=8) eV.
+- Split by phase class, HSE-PBE-SOC mean signed error: cubic -0.82 (n=4), non-cubic -0.51 (n=7), unknown -0.41 (n=5) eV.
+  The cubic group is small and contains CsSnCl3, whose candidate value is for nanocrystals (error -1.58 eV).
+- On the 16 compounds with all four levels: HSE-PBE-SOC MAE 0.56; PBE 0.66; HSErel 0.80; HSErel_SOC 0.75 eV.
+  `tables/fig19_vs_experiment_candidates_common_set.csv`.
+
+**G3. HYPOTHESIS (pattern survives, not verified). Cs compounds are much too low at HSE-PBE-SOC.** With compound-specific
+candidate values the HSE-PBE-SOC mean signed error is -0.93 eV for 7 Cs compounds (DRAFT v1: -0.73, n=3) and -0.27 eV for
+9 organic compounds (v1: -0.34, n=8) (`tables/stage7_cs_pattern_v1_vs_v2.csv`). The gap between the two groups
+survives and is larger. The same holds at PBE and HSErel_SOC. At HSErel the Cs compounds are close (-0.17 eV) and
+the organic ones too high (+1.13 eV). The cause is not tested: it may be the forced cubic structure, the phase of the
+measurement (the Cs compounds are measured in orthorhombic or unknown phases), or the value choice (for example, the
+CsPbCl3 gap is 3.03 eV by exciton subtraction but its absorption onset is 2.88 eV). Must be redone with verified values.
+
+**Not verified:** every candidate value. The paper's own RMSE (Table 2) is now confirmed from the arXiv version
+(see "Dataset paper checks", P1).
 
 ---
 
@@ -305,7 +339,8 @@ leave-one-B-out number (item 7), all quoted dataset values (item 6).
 1. RESOLVED in session 2 through the arXiv version (see "Dataset paper checks"). Still open: the size of the experimental
    set behind the paper's Table 2, and which 7 PBE compounds are missing from the public file.
 2. No second radii set was supplied, so robustness test (1) was skipped.
-3. Experimental comparison is DRAFT only, until `experimental/experimental_verified.csv` is filled from primary papers.
+3. Experimental comparison is DRAFT only (v1: section 9 values; v2: candidate literature values), until the student
+   creates `experimental/experimental_verified.csv` after checking the candidates in the primary papers.
 4. Cause of the 41 equal_flag rows is unknown. A question for the dataset authors.
 5. The MASrI3 HSErel < PBE anomaly and the RbGeBr_1.125Cl_1.875 HSErel 4.31 vs HSE-PBE-SOC 1.34 eV gap are unexplained.
 6. Group 14 Br-Cl "bowing" up to +0.7 eV for a few Ge/Sn compounds was not investigated.

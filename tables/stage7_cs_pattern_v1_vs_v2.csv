@@ -1,0 +1,5 @@
+version,A_class,n,mean_signed_error_HSE_PBE_SOC_eV,compounds
+draft v1 (CLAUDE.md section 9 item 8),Cs,3,-0.732,"CsPbI_3,CsPbBr_3,CsGeI_3"
+draft v1 (CLAUDE.md section 9 item 8),organic (MA/FA),8,-0.34,"MAPbI_3,MAPbBr_3,FAPbBr_3,MAPbCl_3,MASnI_3,MASnBr_3,MAGeI_3,FAGeI_3"
+draft v2 (candidates),Cs,7,-0.934,"CsPbI_3,CsPbBr_3,CsPbCl_3,CsSnI_3,CsSnBr_3,CsSnCl_3,CsGeI_3"
+draft v2 (candidates),organic (MA/FA),9,-0.266,"MAPbI_3,MAPbBr_3,FAPbBr_3,MAPbCl_3,MASnI_3,FASnI_3,MASnBr_3,MAGeI_3,FAGeI_3"

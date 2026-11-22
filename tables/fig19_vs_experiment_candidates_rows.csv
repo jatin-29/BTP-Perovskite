@@ -1,0 +1,19 @@
+Formula,exp_gap,phase_class,sample_type,reference,A_main,X_main,B_main,gap_PBE,gap_HSErel,gap_HSErel_SOC,gap_HSE_PBE_SOC,A_class,error_PBE,error_HSErel,error_HSErel_SOC,error_HSE-PBE-SOC
+CsPbI_3,1.73,unknown,film,"G. E. Eperon et al., Energy Environ. Sci. 7, 982-988 (2014)",Cs,I,Pb,1.482,2.163,1.006,0.937,Cs,-0.248,0.433,-0.724,-0.793
+MAPbI_3,1.52,non-cubic,single crystal,"C. C. Stoumpos, C. D. Malliakas, M. G. Kanatzidis, Inorg. Chem. 52, 9019-9038 (2013)",Ma,I,Pb,1.852,2.635,1.97,1.528,organic (MA/FA),0.332,1.115,0.45,0.008
+FAPbI_3,1.48,non-cubic,single crystal,"C. C. Stoumpos, C. D. Malliakas, M. G. Kanatzidis, Inorg. Chem. 52, 9019-9038 (2013)",Fa,I,Pb,1.942,2.815,2.175,,organic (MA/FA),0.462,1.335,0.695,
+CsPbBr_3,2.25,non-cubic,single crystal,"C. C. Stoumpos et al., Cryst. Growth Des. 13, 2722-2727 (2013)",Cs,Br,Pb,1.774,2.576,1.497,1.419,Cs,-0.476,0.326,-0.753,-0.831
+MAPbBr_3,2.31,unknown,single crystal,"B. Wenger et al., Nat. Commun. 8, 590 (2017)",Ma,Br,Pb,1.974,3.408,2.669,1.725,organic (MA/FA),-0.336,1.098,0.359,-0.585
+FAPbBr_3,2.17,cubic,powder (solution synthesis),"C. A. Lopez, O. Fabelo, C. Abia, M. T. Fernandez-Diaz, J. A. Alonso, Discover Nano 20, 6 (2025)",Fa,Br,Pb,2.112,3.535,2.786,1.867,organic (MA/FA),-0.058,1.365,0.616,-0.303
+CsPbCl_3,3.03,non-cubic,ground single crystals (Bridgman),"Y. He et al., J. Am. Chem. Soc. 143(4) (2021)",Cs,Cl,Pb,2.211,3.077,2.007,1.952,Cs,-0.819,0.047,-1.023,-1.078
+MAPbCl_3,2.94,cubic,powder (ground single crystal),"T. Baikie et al., J. Mater. Chem. A 3, 9298-9307 (2015)",Ma,Cl,Pb,2.526,3.838,2.984,2.416,organic (MA/FA),-0.414,0.898,0.044,-0.523
+FAPbCl_3,2.91,cubic,powder (solution synthesis),"C. A. Lopez, O. Fabelo, C. Abia, M. T. Fernandez-Diaz, J. A. Alonso, Discover Nano 20, 6 (2025)",Fa,Cl,Pb,2.611,4.074,3.27,,organic (MA/FA),-0.299,1.164,0.361,
+CsSnI_3,1.3,non-cubic,single crystal,"I. Chung et al., J. Am. Chem. Soc. 134, 8579-8587 (2012)",Cs,I,Sn,0.483,1.156,0.803,0.607,Cs,-0.817,-0.144,-0.497,-0.693
+MASnI_3,1.2,unknown,single crystal,"C. C. Stoumpos, C. D. Malliakas, M. G. Kanatzidis, Inorg. Chem. 52, 9019-9038 (2013)",Ma,I,Sn,0.879,2.574,2.47,1.138,organic (MA/FA),-0.321,1.374,1.27,-0.062
+FASnI_3,1.41,unknown,single crystal,"C. C. Stoumpos, C. D. Malliakas, M. G. Kanatzidis, Inorg. Chem. 52, 9019-9038 (2013)",Fa,I,Sn,1.054,2.865,2.668,1.317,organic (MA/FA),-0.356,1.455,1.258,-0.093
+CsSnBr_3,1.8,cubic,film (vapour deposited),"D. Moghe et al., Nano Energy 28, 469-474 (2016)",Cs,Br,Sn,0.634,1.389,1.096,0.913,Cs,-1.166,-0.411,-0.704,-0.887
+MASnBr_3,2.2,unknown,film (vapour deposited),"M. Jung, S. R. Raga, Y. Qi, RSC Adv. 6, 2819-2825 (2016)",Ma,Br,Sn,1.262,3.532,3.405,1.687,organic (MA/FA),-0.938,1.332,1.205,-0.513
+CsSnCl_3,2.98,cubic,nanocrystals (hot injection),"M. S. Ali, S. Das, Y. F. Abed, M. A. Basith, Phys. Chem. Chem. Phys. (2021)",Cs,Cl,Sn,1.028,1.804,1.521,1.398,Cs,-1.952,-1.176,-1.459,-1.582
+CsGeI_3,1.6,non-cubic,single crystal,"C. C. Stoumpos et al., J. Am. Chem. Soc. 137, 6804-6819 (2015)",Cs,I,Ge,0.635,1.304,1.098,0.929,Cs,-0.965,-0.296,-0.502,-0.671
+MAGeI_3,1.9,non-cubic,single crystal,"C. C. Stoumpos et al., J. Am. Chem. Soc. 137, 6804-6819 (2015)",Ma,I,Ge,1.311,2.557,2.438,1.798,organic (MA/FA),-0.589,0.657,0.538,-0.102
+FAGeI_3,2.2,non-cubic,single crystal,"C. C. Stoumpos et al., J. Am. Chem. Soc. 137, 6804-6819 (2015)",Fa,I,Ge,1.467,2.861,2.759,1.979,organic (MA/FA),-0.733,0.661,0.559,-0.221
