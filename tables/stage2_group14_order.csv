@@ -1,0 +1,7 @@
+X,level,Group 14 order (largest gap first)
+Cl,PBE,Pb > Ge > Sn
+Cl,HSE-PBE-SOC,Ge > Pb > Sn
+Br,PBE,Pb > Ge > Sn
+Br,HSE-PBE-SOC,Ge > Pb > Sn
+I,PBE,Pb > Ge > Sn
+I,HSE-PBE-SOC,Ge > Pb > Sn

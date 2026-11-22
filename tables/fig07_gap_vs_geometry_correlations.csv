@@ -1,0 +1,17 @@
+descriptor,group,n,pearson_r,spearman_rho
+tolerance,Group 14,76,0.781,0.736
+tolerance,mixed B,91,0.056,0.014
+tolerance,Group 2,77,0.431,0.426
+tolerance,all,244,0.007,-0.035
+octahedral,Group 14,76,0.002,0.145
+octahedral,mixed B,91,0.504,0.478
+octahedral,Group 2,77,0.246,0.207
+octahedral,all,244,0.408,0.375
+rX,Group 14,76,-0.473,-0.504
+rX,mixed B,91,-0.566,-0.547
+rX,Group 2,77,-0.91,-0.926
+rX,all,244,-0.347,-0.329
+bartel_tau,Group 14,76,-0.575,-0.69
+bartel_tau,mixed B,91,0.116,-0.04
+bartel_tau,Group 2,77,-0.296,-0.455
+bartel_tau,all,244,0.147,-0.021

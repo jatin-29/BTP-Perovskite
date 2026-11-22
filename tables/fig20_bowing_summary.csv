@@ -1,0 +1,19 @@
+level,pair,group,n,mean_deviation_eV,std_deviation_eV,median_bowing_b_eV,min_deviation_eV,max_deviation_eV
+HSE-PBE-SOC,Br-Cl,Group 14,6,0.277,0.344,-1.216,-0.078,0.71
+HSE-PBE-SOC,Br-Cl,Group 2,3,-0.26,0.107,0.831,-0.383,-0.189
+HSE-PBE-SOC,I-Br,Group 14,9,0.085,0.132,-0.453,-0.055,0.32
+HSE-PBE-SOC,I-Br,Group 2,5,-0.222,0.134,1.032,-0.36,-0.0
+HSErel,Br-Cl,Group 14,11,0.738,0.952,-1.596,0.007,2.628
+HSErel,Br-Cl,Group 2,6,-0.314,0.146,1.928,-0.569,-0.178
+HSErel,I-Br,Group 14,11,0.702,0.787,-1.943,-0.124,2.21
+HSErel,I-Br,Group 2,6,-0.222,0.129,1.071,-0.337,0.026
+HSErel_SOC,Br-Cl,Group 14,10,0.588,0.8,-1.63,0.029,2.685
+HSErel_SOC,Br-Cl,Group 2,6,-0.347,0.165,2.285,-0.626,-0.186
+HSErel_SOC,I-Br,Group 14,9,0.754,0.801,-1.691,0.044,2.395
+HSErel_SOC,I-Br,Group 2,6,-0.242,0.129,1.119,-0.371,-0.004
+PBE,Br-Cl,Group 14,30,0.132,0.286,0.243,-0.128,0.706
+PBE,Br-Cl,Group 2,23,-0.177,0.086,0.905,-0.438,-0.069
+PBE,I-Br,Group 14,26,0.026,0.152,0.297,-0.153,0.403
+PBE,I-Br,Group 2,18,-0.194,0.108,0.881,-0.477,0.084
+PBE,I-Cl,Group 14,4,0.136,0.511,-0.807,-0.299,0.794
+PBE,I-Cl,Group 2,22,-0.317,0.327,1.676,-0.936,0.429

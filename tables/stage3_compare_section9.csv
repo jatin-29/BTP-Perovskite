@@ -1,0 +1,5 @@
+label,this run,earlier (idxmax-defined group),difference
+A site (main),0.015,0.01,0.005
+X site (main),0.125,0.12,0.005
+B element (main),0.659,0.66,-0.001
+B group (g2_frac),0.731,0.63,0.101

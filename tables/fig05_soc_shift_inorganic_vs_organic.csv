@@ -1,0 +1,10 @@
+compound,mean_inorganic_A_eV,n_inorganic,mean_organic_A_eV,n_organic,organic_minus_inorganic_eV
+GeCl3,-0.08,3,-0.014,2,0.066
+GeBr3,-0.105,3,-0.028,2,0.076
+GeI3,-0.201,3,-0.111,2,0.09
+SnCl3,-0.285,3,-0.102,2,0.184
+SnBr3,-0.295,3,-0.115,2,0.179
+SnI3,-0.351,3,-0.15,2,0.2
+PbCl3,-1.08,3,-0.828,2,0.252
+PbBr3,-1.084,3,-0.744,2,0.34
+PbI3,-1.157,3,-0.653,2,0.504
