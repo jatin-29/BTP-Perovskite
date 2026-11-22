@@ -1,0 +1,6 @@
+deviation column,pearson_r_with_organic_frac,max_inorganic_A,median_organic_A,median_mixed_A
+dev_b,0.5652,0.0213,0.0307,0.0465
+dev_c,0.5227,0.0114,0.0232,0.045
+dev_alpha,0.43,0.0002,0.0139,0.0688
+dev_beta,0.544,0.0002,0.0165,0.0
+dev_gamma,0.5077,0.0,0.0025,0.0

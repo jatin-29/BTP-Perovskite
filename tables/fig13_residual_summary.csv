@@ -1,0 +1,6 @@
+A_type,near_zero_dev,size,mean,std
+inorganic A,False,3,-0.378,0.141
+inorganic A,True,37,-0.471,0.224
+mixed organic/inorganic A,False,7,0.385,0.109
+organic A,False,22,0.635,0.437
+organic A,True,6,0.313,0.202

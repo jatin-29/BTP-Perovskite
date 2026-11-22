@@ -1578,5 +1578,520 @@
   "value": 0.964,
   "stage": "stage 3",
   "note": "n=77"
+ },
+ "g14_n": {
+  "value": 76,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_n_groups": {
+  "value": 43,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_mean_baseline_random_KFold": {
+  "value": -0.061,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_mean_baseline_random_KFold": {
+  "value": 0.577,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_mean_baseline_GroupKFold": {
+  "value": -0.036,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_mean_baseline_GroupKFold": {
+  "value": 0.581,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_linear_(fractions)_random_KFold": {
+  "value": 0.739,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_linear_(fractions)_random_KFold": {
+  "value": 0.274,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_linear_(fractions)_GroupKFold": {
+  "value": 0.738,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_linear_(fractions)_GroupKFold": {
+  "value": 0.285,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge_alpha=0.1_random_KFold": {
+  "value": 0.924,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge_alpha=0.1_random_KFold": {
+  "value": 0.146,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge_alpha=0.1_GroupKFold": {
+  "value": 0.794,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge_alpha=0.1_GroupKFold": {
+  "value": 0.242,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge_alpha=1_random_KFold": {
+  "value": 0.912,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge_alpha=1_random_KFold": {
+  "value": 0.153,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge_alpha=1_GroupKFold": {
+  "value": 0.866,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge_alpha=1_GroupKFold": {
+  "value": 0.216,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge_alpha=10_random_KFold": {
+  "value": 0.857,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge_alpha=10_random_KFold": {
+  "value": 0.192,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge_alpha=10_GroupKFold": {
+  "value": 0.864,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge_alpha=10_GroupKFold": {
+  "value": 0.213,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge_alpha=100_random_KFold": {
+  "value": 0.658,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge_alpha=100_random_KFold": {
+  "value": 0.299,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge_alpha=100_GroupKFold": {
+  "value": 0.685,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge_alpha=100_GroupKFold": {
+  "value": 0.303,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_R2_products_Ridge,_nested_alpha_GroupKFold": {
+  "value": 0.864,
+  "stage": "stage 4",
+  "note": "pooled out-of-fold R2, n=76"
+ },
+ "g14_MAE_products_Ridge,_nested_alpha_GroupKFold": {
+  "value": 0.213,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_intercept": {
+  "value": 1.777,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_intercept_rowboot_low": {
+  "value": 1.623,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_intercept_rowboot_high": {
+  "value": 1.939,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_intercept_groupboot_low": {
+  "value": 1.568,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_intercept_groupboot_high": {
+  "value": 1.963,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_K": {
+  "value": -0.112,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_K_rowboot_low": {
+  "value": -0.315,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_K_rowboot_high": {
+  "value": 0.071,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_K_groupboot_low": {
+  "value": -0.284,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_K_groupboot_high": {
+  "value": 0.111,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Rb": {
+  "value": -0.106,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_Rb_rowboot_low": {
+  "value": -0.264,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Rb_rowboot_high": {
+  "value": 0.051,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Rb_groupboot_low": {
+  "value": -0.282,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Rb_groupboot_high": {
+  "value": 0.122,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_MA": {
+  "value": 0.82,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_MA_rowboot_low": {
+  "value": 0.667,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_MA_rowboot_high": {
+  "value": 0.996,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_MA_groupboot_low": {
+  "value": 0.614,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_MA_groupboot_high": {
+  "value": 0.997,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_FA": {
+  "value": 1.19,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_FA_rowboot_low": {
+  "value": 0.893,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_FA_rowboot_high": {
+  "value": 1.54,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_FA_groupboot_low": {
+  "value": 0.797,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_FA_groupboot_high": {
+  "value": 1.653,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Br": {
+  "value": -0.464,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_Br_rowboot_low": {
+  "value": -0.668,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Br_rowboot_high": {
+  "value": -0.288,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Br_groupboot_low": {
+  "value": -0.679,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Br_groupboot_high": {
+  "value": -0.216,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_I": {
+  "value": -0.958,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_I_rowboot_low": {
+  "value": -1.143,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_I_rowboot_high": {
+  "value": -0.793,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_I_groupboot_low": {
+  "value": -1.183,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_I_groupboot_high": {
+  "value": -0.743,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Ge": {
+  "value": 0.223,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_Ge_rowboot_low": {
+  "value": 0.028,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Ge_rowboot_high": {
+  "value": 0.429,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Ge_groupboot_low": {
+  "value": -0.043,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Ge_groupboot_high": {
+  "value": 0.474,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Sn": {
+  "value": -0.321,
+  "stage": "stage 4",
+  "note": "linear fractions, n=76"
+ },
+ "g14_coef_Sn_rowboot_low": {
+  "value": -0.474,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Sn_rowboot_high": {
+  "value": -0.158,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Sn_groupboot_low": {
+  "value": -0.502,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_coef_Sn_groupboot_high": {
+  "value": -0.135,
+  "stage": "stage 4",
+  "note": ""
+ },
+ "g14_dev_R2_BplusX_only_random_KFold": {
+  "value": 0.205,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_BplusX_only_GroupKFold": {
+  "value": 0.179,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_plus_organic_random_KFold": {
+  "value": 0.735,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_plus_organic_GroupKFold": {
+  "value": 0.773,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_plus_deviation_random_KFold": {
+  "value": 0.796,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_plus_deviation_GroupKFold": {
+  "value": 0.786,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_plus_both_random_KFold": {
+  "value": 0.833,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_plus_both_GroupKFold": {
+  "value": 0.822,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_all_fractions_random_KFold": {
+  "value": 0.762,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_all_fractions_GroupKFold": {
+  "value": 0.78,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_all_fractions_plus_deviation_random_KFold": {
+  "value": 0.847,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_dev_R2_all_fractions_plus_deviation_GroupKFold": {
+  "value": 0.854,
+  "stage": "stage 4",
+  "note": "linear, n=75"
+ },
+ "g14_coef_with_dev_K": {
+  "value": -0.078,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_Rb": {
+  "value": -0.076,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_MA": {
+  "value": 0.254,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_FA": {
+  "value": -0.37,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_Br": {
+  "value": -0.497,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_I": {
+  "value": -0.85,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_Ge": {
+  "value": -0.153,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_Sn": {
+  "value": -0.43,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_dev_b": {
+  "value": 6.01,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_dev_c": {
+  "value": 4.796,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_dev_alpha": {
+  "value": 3.61,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_dev_beta": {
+  "value": 11.912,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_coef_with_dev_dev_gamma": {
+  "value": 8.491,
+  "stage": "stage 4",
+  "note": "n=75"
+ },
+ "g14_residual_mean_inorganic_A_devb_below_0p01_False": {
+  "value": -0.378,
+  "stage": "stage 4",
+  "note": "n=3"
+ },
+ "g14_residual_mean_inorganic_A_devb_below_0p01_True": {
+  "value": -0.471,
+  "stage": "stage 4",
+  "note": "n=37"
+ },
+ "g14_residual_mean_mixed_organic_inorganic_A_devb_below_0p01_False": {
+  "value": 0.385,
+  "stage": "stage 4",
+  "note": "n=7"
+ },
+ "g14_residual_mean_organic_A_devb_below_0p01_False": {
+  "value": 0.635,
+  "stage": "stage 4",
+  "note": "n=22"
+ },
+ "g14_residual_mean_organic_A_devb_below_0p01_True": {
+  "value": 0.313,
+  "stage": "stage 4",
+  "note": "n=6"
  }
 }

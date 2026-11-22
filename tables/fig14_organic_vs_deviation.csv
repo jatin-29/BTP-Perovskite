@@ -1,0 +1,13 @@
+feature set,cv,R2_pooled,MAE_eV,n,n_features
+B+X only,random KFold,0.205,0.533,75,4
+B+X only,GroupKFold,0.179,0.553,75,4
++ organic,random KFold,0.735,0.287,75,5
++ organic,GroupKFold,0.773,0.275,75,5
++ deviation,random KFold,0.796,0.243,75,9
++ deviation,GroupKFold,0.786,0.263,75,9
++ both,random KFold,0.833,0.184,75,10
++ both,GroupKFold,0.822,0.205,75,10
+all fractions,random KFold,0.762,0.267,75,8
+all fractions,GroupKFold,0.78,0.265,75,8
+all fractions + deviation,random KFold,0.847,0.178,75,13
+all fractions + deviation,GroupKFold,0.854,0.176,75,13
