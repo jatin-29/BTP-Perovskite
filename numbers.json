@@ -3575,8 +3575,23 @@
   "note": ""
  },
  "notebook_runtime_seconds": {
-  "value": 113.6471,
+  "value": 115.6049,
   "stage": "stage 10",
   "note": "wall time of this run up to stage 10"
+ },
+ "stage9_nested_grouped_R2": {
+  "value": 0.7489,
+  "stage": "stage 9",
+  "note": "best <=3-term linear formula chosen inside each training fold"
+ },
+ "stage9_nested_grouped_MAE": {
+  "value": 0.2671,
+  "stage": "stage 9",
+  "note": ""
+ },
+ "stage9_final_formula_grouped_R2_optimistic": {
+  "value": 0.8047,
+  "stage": "stage 9",
+  "note": "gap = -20.251 +7.231 * octahedral +6.284 * tolerance +0.540 * IE_B"
  }
 }

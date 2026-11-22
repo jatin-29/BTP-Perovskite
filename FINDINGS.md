@@ -1,6 +1,6 @@
 # FINDINGS
 
-Status (2026-11-22): stages 0 to 8 and 10 are done and committed. Stage 9 (optional) is listed at the end.
+Status (2026-11-22): all stages 0 to 10 are done and committed, including optional stage 9 (end of file).
 All numbers below come from `btp_perovskite.ipynb` (executed with outputs). The source of each number is in
 `numbers.json` (key and stage) and in the `tables/` CSV files named next to it.
 
@@ -252,6 +252,15 @@ leave-one-B-out number (item 7), all quoted dataset values (item 6).
 9. Package note: `pymatgen` failed to install at first (the bibtexparser build failed with the old setuptools). After
    `pip install --upgrade --ignore-installed setuptools` it installed (version 2026.10.31). No alternative package was needed.
 
-## Stage 9 (optional)
+## Stage 9 (optional): compact formula
 
-See the section "Stage 9 result" at the end of this file once it is added. If that section is missing, stage 9 was not done.
+**H1. HYPOTHESIS. A 3-term linear formula does about as well as the 8-term composition model in strict Group 14, but
+the chosen formula is not stable.** PySR was not used, because it needs Julia. Instead, every linear formula with
+1 to 3 terms from a library of 21 descriptors (1561 formulas) was searched. The formula was chosen inside each training
+fold with an inner GroupKFold(4) (nested, honest). Outer splits: the same GroupKFold(5) as stage 4 (`tables/stage9_compact_formula.csv`).
+- Nested grouped R2 0.749, MAE 0.267 eV (n = 76), against 0.738 / 0.285 eV for the 8-term linear fraction model.
+- The five outer folds chose different formulas: rA + rB + t; rX + t + Z_B; frac_Sn + organic_frac + Z_X; mu + t + IE_B (twice).
+  The tolerance factor appears in 4 of 5.
+- Chosen on all 76 rows: gap = -20.251 + 7.231 mu + 6.284 t + 0.540 IE_B (eV), grouped R2 0.805. This number is
+  optimistic, because the choice saw all rows. Within strict Group 14, IE_B only takes the Ge, Sn and Pb values, so it
+  works like a B-element label here.
