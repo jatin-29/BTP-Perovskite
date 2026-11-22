@@ -1,0 +1,3 @@
+model,mean_difference_eV,low_95_eV,high_95_eV,fraction_of_resamples_label_better
+RandomForest,0.085,0.047,0.121,1.0
+Ridge,0.355,0.319,0.387,1.0

@@ -197,7 +197,7 @@ Read `experimental/experimental_verified.csv` (columns: Formula, exp_gap, exp_re
 if it exists. The student fills it from primary papers. Compute error (dataset minus experiment) for PBE,
 HSErel_SOC and HSE-PBE-SOC: n, MAE, RMSE, mean error, parity plots coloured by A type (Cs versus organic), and
 error versus halide. If the file is missing or rows are empty, build `experimental_template.csv` with the dataset
-gaps filled and the experimental columns empty, and run the stage with the DRAFT values in section 9 item 10 ONLY
+gaps filled and the experimental columns empty, and run the stage with the DRAFT values in section 9 item 8 ONLY
 if every figure is stamped "DRAFT, unverified experimental values" in the title.
 
 ### Stage 8: robustness

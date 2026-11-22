@@ -1,0 +1,13 @@
+level,set,split,group,n,MAE_eV,RMSE_eV,mean_signed_error_eV,status
+PBE,compounds with all four levels (n=16),A_class,all,16,0.658,0.795,-0.616,"DRAFT, candidate experimental values (not verified)"
+PBE,compounds with all four levels (n=16),A_class,Cs,7,0.92,1.051,-0.92,"DRAFT, candidate experimental values (not verified)"
+PBE,compounds with all four levels (n=16),A_class,organic (MA/FA),9,0.453,0.516,-0.379,"DRAFT, candidate experimental values (not verified)"
+HSErel,compounds with all four levels (n=16),A_class,all,16,0.799,0.926,0.546,"DRAFT, candidate experimental values (not verified)"
+HSErel,compounds with all four levels (n=16),A_class,Cs,7,0.405,0.529,-0.174,"DRAFT, candidate experimental values (not verified)"
+HSErel,compounds with all four levels (n=16),A_class,organic (MA/FA),9,1.106,1.143,1.106,"DRAFT, candidate experimental values (not verified)"
+HSErel_SOC,compounds with all four levels (n=16),A_class,all,16,0.747,0.837,0.04,"DRAFT, candidate experimental values (not verified)"
+HSErel_SOC,compounds with all four levels (n=16),A_class,Cs,7,0.809,0.867,-0.809,"DRAFT, candidate experimental values (not verified)"
+HSErel_SOC,compounds with all four levels (n=16),A_class,organic (MA/FA),9,0.7,0.814,0.7,"DRAFT, candidate experimental values (not verified)"
+HSE-PBE-SOC,compounds with all four levels (n=16),A_class,all,16,0.559,0.696,-0.558,"DRAFT, candidate experimental values (not verified)"
+HSE-PBE-SOC,compounds with all four levels (n=16),A_class,Cs,7,0.934,0.979,-0.934,"DRAFT, candidate experimental values (not verified)"
+HSE-PBE-SOC,compounds with all four levels (n=16),A_class,organic (MA/FA),9,0.268,0.34,-0.266,"DRAFT, candidate experimental values (not verified)"

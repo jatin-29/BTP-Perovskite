@@ -1,0 +1,46 @@
+group,quantity,dataset radii,Shannon radii,difference
+stage 5a LOBO average MAE (eV),"geometry only, mean baseline",2.059,2.059,-0.0
+stage 5a LOBO average MAE (eV),"geometry only, RandomForest",1.847,3.025,1.178
+stage 5a LOBO average MAE (eV),"geometry only, Ridge",2.126,2.35,0.224
+stage 5a LOBO average MAE (eV),"geometry + Z, mean baseline",2.059,2.059,-0.0
+stage 5a LOBO average MAE (eV),"geometry + Z, RandomForest",1.954,2.839,0.885
+stage 5a LOBO average MAE (eV),"geometry + Z, Ridge",1.725,1.488,-0.237
+stage 5a LOBO average MAE (eV),"geometry + electronic, mean baseline",2.059,2.059,-0.0
+stage 5a LOBO average MAE (eV),"geometry + electronic, RandomForest",0.447,0.452,0.005
+stage 5a LOBO average MAE (eV),"geometry + electronic, Ridge",0.698,1.045,0.347
+stage 5b ablation average MAE (eV),"geometry only, RandomForest",1.847,3.025,1.178
+stage 5b ablation average MAE (eV),"geometry only, Ridge",2.126,2.35,0.224
+stage 5b ablation average MAE (eV),"+ g14_flag only, RandomForest",0.361,0.306,-0.055
+stage 5b ablation average MAE (eV),"+ g14_flag only, Ridge",0.343,0.341,-0.002
+stage 5b ablation average MAE (eV),"+ EN_B only, RandomForest",0.42,0.375,-0.045
+stage 5b ablation average MAE (eV),"+ EN_B only, Ridge",0.811,0.862,0.051
+stage 5b ablation average MAE (eV),"+ all electronic, RandomForest",0.447,0.452,0.005
+stage 5b ablation average MAE (eV),"+ all electronic, Ridge",0.698,1.045,0.347
+stage 5c leave-one-group-out MAE (eV),"Group 14 -> Group 2, geometry only, RandomForest",3.539,3.597,0.058
+stage 5c leave-one-group-out MAE (eV),"Group 14 -> Group 2, geometry only, Ridge",3.7,3.665,-0.035
+stage 5c leave-one-group-out MAE (eV),"Group 14 -> Group 2, geometry + Z, RandomForest",3.625,3.637,0.012
+stage 5c leave-one-group-out MAE (eV),"Group 14 -> Group 2, geometry + Z, Ridge",4.102,3.963,-0.139
+stage 5c leave-one-group-out MAE (eV),"Group 14 -> Group 2, geometry + electronic, RandomForest",3.663,3.666,0.003
+stage 5c leave-one-group-out MAE (eV),"Group 14 -> Group 2, geometry + electronic, Ridge",5.031,4.636,-0.395
+stage 5c leave-one-group-out MAE (eV),"Group 2 -> Group 14, geometry only, RandomForest",3.565,3.557,-0.008
+stage 5c leave-one-group-out MAE (eV),"Group 2 -> Group 14, geometry only, Ridge",3.635,3.665,0.03
+stage 5c leave-one-group-out MAE (eV),"Group 2 -> Group 14, geometry + Z, RandomForest",3.552,3.542,-0.01
+stage 5c leave-one-group-out MAE (eV),"Group 2 -> Group 14, geometry + Z, Ridge",3.711,3.69,-0.021
+stage 5c leave-one-group-out MAE (eV),"Group 2 -> Group 14, geometry + electronic, RandomForest",3.282,3.301,0.019
+stage 5c leave-one-group-out MAE (eV),"Group 2 -> Group 14, geometry + electronic, Ridge",2.275,1.723,-0.552
+Pearson r with HSE-PBE-SOC gap,"tolerance, Group 14",0.781,0.733,-0.048
+Pearson r with HSE-PBE-SOC gap,"tolerance, Group 2",0.431,0.453,0.022
+Pearson r with HSE-PBE-SOC gap,"tolerance, all",0.007,-0.009,-0.015
+Pearson r with HSE-PBE-SOC gap,"octahedral, Group 14",0.002,-0.09,-0.092
+Pearson r with HSE-PBE-SOC gap,"octahedral, Group 2",0.246,0.321,0.075
+Pearson r with HSE-PBE-SOC gap,"octahedral, all",0.408,0.361,-0.047
+Pearson r with HSE-PBE-SOC gap,"rX, Group 14",-0.473,-0.473,0.0
+Pearson r with HSE-PBE-SOC gap,"rX, Group 2",-0.91,-0.91,0.0
+Pearson r with HSE-PBE-SOC gap,"rX, all",-0.347,-0.347,0.0
+Pearson r with HSE-PBE-SOC gap,"bartel_tau, Group 14",-0.575,-0.355,0.219
+Pearson r with HSE-PBE-SOC gap,"bartel_tau, Group 2",-0.296,-0.461,-0.165
+Pearson r with HSE-PBE-SOC gap,"bartel_tau, all",0.147,-0.057,-0.204
+counts (all 490 compounds),Bartel tau < 4.18,230.0,263.0,33.0
+counts (all 490 compounds),0.8 <= t <= 1.0,328.0,386.0,58.0
+ranges (all 490 compounds),mean t,0.879,0.91,0.031
+ranges (all 490 compounds),mean mu,0.579,0.556,-0.023
