@@ -1,0 +1,14 @@
+Formula,exp_gap,exp_reference,exp_phase_and_temperature,A_main,B_main,X_main,A_type,gap_PBE,gap_HSErel_SOC,gap_HSE_PBE_SOC,A_class,error_PBE,error_HSErel_SOC,error_HSE-PBE-SOC
+CsPbI_3,1.6,DRAFT (CLAUDE.md section 9 item 8): Pb iodides about 1.6,unknown,Cs,Pb,I,inorganic A,1.482,1.006,0.937,Cs,-0.118,-0.594,-0.663
+MAPbI_3,1.6,DRAFT (CLAUDE.md section 9 item 8): Pb iodides about 1.6,unknown,Ma,Pb,I,organic A,1.852,1.97,1.528,organic (MA/FA),0.252,0.37,-0.072
+FAPbI_3,1.6,DRAFT (CLAUDE.md section 9 item 8): Pb iodides about 1.6,unknown,Fa,Pb,I,organic A,1.942,2.175,,organic (MA/FA),0.342,0.575,
+CsPbBr_3,2.25,DRAFT (CLAUDE.md section 9 item 8): Pb bromides about 2.2 to 2.3 (midpoint),unknown,Cs,Pb,Br,inorganic A,1.774,1.497,1.419,Cs,-0.476,-0.753,-0.831
+MAPbBr_3,2.25,DRAFT (CLAUDE.md section 9 item 8): Pb bromides about 2.2 to 2.3 (midpoint),unknown,Ma,Pb,Br,organic A,1.974,2.669,1.725,organic (MA/FA),-0.276,0.419,-0.525
+FAPbBr_3,2.25,DRAFT (CLAUDE.md section 9 item 8): Pb bromides about 2.2 to 2.3 (midpoint),unknown,Fa,Pb,Br,organic A,2.112,2.786,1.867,organic (MA/FA),-0.138,0.536,-0.383
+MAPbCl_3,3.0,DRAFT (CLAUDE.md section 9 item 8): MAPbCl3 about 2.9 to 3.1 (midpoint),unknown,Ma,Pb,Cl,organic A,2.526,2.984,2.416,organic (MA/FA),-0.474,-0.016,-0.583
+FAPbCl_3,3.0,DRAFT (CLAUDE.md section 9 item 8): FAPbCl3 about 3.0,unknown,Fa,Pb,Cl,organic A,2.611,3.27,,organic (MA/FA),-0.389,0.271,
+MASnI_3,1.21,DRAFT (CLAUDE.md section 9 item 8): MASnI3 1.21,unknown,Ma,Sn,I,organic A,0.879,2.47,1.138,organic (MA/FA),-0.331,1.26,-0.072
+MASnBr_3,2.2,DRAFT (CLAUDE.md section 9 item 8): MASnBr3 about 2.2,unknown,Ma,Sn,Br,organic A,1.262,3.405,1.687,organic (MA/FA),-0.938,1.205,-0.513
+CsGeI_3,1.63,DRAFT (CLAUDE.md section 9 item 8): CsGeI3 1.63,unknown,Cs,Ge,I,inorganic A,0.635,1.098,0.929,Cs,-0.995,-0.532,-0.701
+MAGeI_3,2.0,DRAFT (CLAUDE.md section 9 item 8): MAGeI3 2.00,unknown,Ma,Ge,I,organic A,1.311,2.438,1.798,organic (MA/FA),-0.689,0.438,-0.202
+FAGeI_3,2.35,DRAFT (CLAUDE.md section 9 item 8): FAGeI3 2.35,unknown,Fa,Ge,I,organic A,1.467,2.759,1.979,organic (MA/FA),-0.883,0.409,-0.371

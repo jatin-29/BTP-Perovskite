@@ -1,0 +1,9 @@
+target,cv,n,n_groups,R2_pooled,MAE_eV
+PBE,random KFold,178,45,0.768,0.283
+PBE,GroupKFold,178,45,0.736,0.306
+HSErel,random KFold,88,45,0.515,0.51
+HSErel,GroupKFold,88,45,0.544,0.519
+HSErel_SOC,random KFold,82,45,0.655,0.453
+HSErel_SOC,GroupKFold,82,45,0.684,0.441
+HSE-PBE-SOC,random KFold,76,43,0.739,0.274
+HSE-PBE-SOC,GroupKFold,76,43,0.738,0.285

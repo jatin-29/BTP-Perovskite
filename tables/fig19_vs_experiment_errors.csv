@@ -1,0 +1,10 @@
+level,subset,n,MAE_eV,RMSE_eV,mean_error_eV,status
+PBE,all,13,0.485,0.563,-0.393,"DRAFT, unverified experimental values"
+PBE,Cs,3,0.53,0.64,-0.53,"DRAFT, unverified experimental values"
+PBE,organic (MA/FA),10,0.471,0.538,-0.352,"DRAFT, unverified experimental values"
+HSErel_SOC,all,13,0.567,0.657,0.276,"DRAFT, unverified experimental values"
+HSErel_SOC,Cs,3,0.626,0.633,-0.626,"DRAFT, unverified experimental values"
+HSErel_SOC,organic (MA/FA),10,0.55,0.663,0.547,"DRAFT, unverified experimental values"
+HSE-PBE-SOC,all,11,0.447,0.508,-0.447,"DRAFT, unverified experimental values"
+HSE-PBE-SOC,Cs,3,0.732,0.735,-0.732,"DRAFT, unverified experimental values"
+HSE-PBE-SOC,organic (MA/FA),8,0.34,0.39,-0.34,"DRAFT, unverified experimental values"

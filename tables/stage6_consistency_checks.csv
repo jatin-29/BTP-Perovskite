@@ -1,0 +1,7 @@
+check,passed,tested,violations
+Group 14 pure: SOC shift < 0,45,45,
+"Group 14 pure: |SOC| Pb > Sn > Ge for each (A, X)",14,15,Ma-I
+"PBE: gap Cl > Br > I for each (A, B)",30,30,
+"HSErel: gap Cl > Br > I for each (A, B)",28,30,"MAGe: Cl 3.02, Br 3.32, I 2.56; MASn: Cl 3.18, Br 3.53, I 2.57"
+"HSErel_SOC: gap Cl > Br > I for each (A, B)",27,29,"MAGe: Cl 3.01, Br 3.30, I 2.44; MASn: Cl 3.06, Br 3.40, I 2.47"
+"HSE-PBE-SOC: gap Cl > Br > I for each (A, B)",24,24,
