@@ -398,7 +398,7 @@ CsPbCl3 gap is 3.03 eV by exciton subtraction but its absorption onset is 2.88 e
 |---|---|---|---|---|
 | 3: variance, B group | 0.63 | 0.731 | +0.10 | group now from g2_frac (earlier idxmax) -> RETIRED |
 | 4: products Ridge alpha 1, grouped R2 | 0.80 | 0.866 | +0.066 | exact earlier pipeline unknown (here: degree-2 products + scaling + Ridge, GroupKFold(5) without shuffling) |
-| 2: PBE mean Sn-Cl on the SAME compounds | 1.37 | 1.102 | -0.27 | earlier means were over different compound sets; on all available compounds, 1.374 (match) |
+| 2: PBE mean Sn-Cl on the SAME compounds | 1.37 | 1.102 | -0.27 | earlier means were over different compound sets (now SUPERSEDED); same-set value is the headline |
 | 2: PBE Pb-Cl / Pb-I on the SAME compounds | 2.34 / 1.64 | 2.274 / 1.560 | -0.07 / -0.08 | same reason |
 | 5: "+ deviation" grouped R2 (read from a bar chart) | about 0.72 | 0.786 | +0.07 | bar-chart reading; same 75 rows here |
 | 5: "grouped R2 0.73 to 0.82" with deviation | 0.73 -> 0.82 | 0.780 -> 0.854 | +0.05 / +0.03 | here n=75 (one row without deviation); earlier row set unknown |
