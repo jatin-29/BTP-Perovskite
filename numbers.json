@@ -3568,5 +3568,15 @@
   "value": 3.325,
   "stage": "stage 8",
   "note": ""
+ },
+ "experimental_values_are_draft": {
+  "value": true,
+  "stage": "stage 7",
+  "note": ""
+ },
+ "notebook_runtime_seconds": {
+  "value": 113.6471,
+  "stage": "stage 10",
+  "note": "wall time of this run up to stage 10"
  }
 }
