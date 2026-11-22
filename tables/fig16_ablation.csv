@@ -1,0 +1,15 @@
+feature_set,model,average_MAE_eV,MAE_Ge,MAE_Sn,MAE_Pb,MAE_Ca,MAE_Sr,MAE_Ba
+geometry only,RandomForest,1.847,3.079,1.607,0.469,3.388,1.941,0.599
+geometry only,Ridge,2.126,1.392,2.317,2.208,3.531,1.792,1.514
++ g14_flag only,RandomForest,0.361,0.624,0.461,0.379,0.392,0.162,0.149
++ g14_flag only,Ridge,0.343,0.548,0.386,0.309,0.426,0.204,0.186
++ EN_B only,RandomForest,0.42,0.627,0.529,0.378,0.675,0.154,0.154
++ EN_B only,Ridge,0.811,0.585,0.992,1.704,0.953,0.248,0.382
++ IE_B only,RandomForest,0.658,0.397,0.577,0.375,1.843,0.611,0.145
++ IE_B only,Ridge,0.521,0.526,0.623,0.739,0.421,0.405,0.412
++ EN_X only,RandomForest,1.871,3.175,1.627,0.457,3.405,1.972,0.59
++ EN_X only,Ridge,2.126,1.388,2.317,2.207,3.532,1.793,1.517
++ all electronic,RandomForest,0.447,0.62,0.711,0.517,0.484,0.162,0.185
++ all electronic,Ridge,0.698,0.545,0.696,1.634,0.412,0.495,0.406
++ all electronic + g14_flag,RandomForest,0.446,0.623,0.706,0.508,0.485,0.163,0.19
++ all electronic + g14_flag,Ridge,0.512,0.596,0.416,1.178,0.441,0.248,0.19

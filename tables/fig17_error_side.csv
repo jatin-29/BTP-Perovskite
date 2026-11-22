@@ -1,0 +1,19 @@
+direction,feature_set,model,fraction_predicted_too_low,fraction_predicted_too_high,test_true_min_eV,test_true_max_eV,pred_min_eV,pred_max_eV
+train Group 14 -> test Group 2,geometry only,mean baseline,1.0,0.0,3.824,6.668,1.596,1.596
+train Group 14 -> test Group 2,geometry only,RandomForest,1.0,0.0,3.824,6.668,0.604,2.662
+train Group 14 -> test Group 2,geometry only,Ridge,1.0,0.0,3.824,6.668,0.356,3.079
+train Group 14 -> test Group 2,geometry + Z,mean baseline,1.0,0.0,3.824,6.668,1.596,1.596
+train Group 14 -> test Group 2,geometry + Z,RandomForest,1.0,0.0,3.824,6.668,0.65,2.628
+train Group 14 -> test Group 2,geometry + Z,Ridge,1.0,0.0,3.824,6.668,-0.088,2.811
+train Group 14 -> test Group 2,geometry + electronic,mean baseline,1.0,0.0,3.824,6.668,1.596,1.596
+train Group 14 -> test Group 2,geometry + electronic,RandomForest,1.0,0.0,3.824,6.668,0.637,2.591
+train Group 14 -> test Group 2,geometry + electronic,Ridge,1.0,0.0,3.824,6.668,-1.156,1.898
+train Group 2 -> test Group 14,geometry only,mean baseline,0.0,1.0,0.486,3.956,5.1,5.1
+train Group 2 -> test Group 14,geometry only,RandomForest,0.0,1.0,0.486,3.956,4.019,6.496
+train Group 2 -> test Group 14,geometry only,Ridge,0.0,1.0,0.486,3.956,4.026,6.585
+train Group 2 -> test Group 14,geometry + Z,mean baseline,0.0,1.0,0.486,3.956,5.1,5.1
+train Group 2 -> test Group 14,geometry + Z,RandomForest,0.0,1.0,0.486,3.956,4.023,6.422
+train Group 2 -> test Group 14,geometry + Z,Ridge,0.0,1.0,0.486,3.956,4.14,6.733
+train Group 2 -> test Group 14,geometry + electronic,mean baseline,0.0,1.0,0.486,3.956,5.1,5.1
+train Group 2 -> test Group 14,geometry + electronic,RandomForest,0.0,1.0,0.486,3.956,4.014,5.794
+train Group 2 -> test Group 14,geometry + electronic,Ridge,0.0,1.0,0.486,3.956,2.334,5.41

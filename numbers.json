@@ -2093,5 +2093,570 @@
   "value": 0.313,
   "stage": "stage 4",
   "note": "n=6"
+ },
+ "lobo_avgMAE_geometry_only_mean_baseline": {
+  "value": 2.059,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_avgMAE_geometry_only_RandomForest": {
+  "value": 1.847,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_avgMAE_geometry_only_Ridge": {
+  "value": 2.126,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_avgMAE_geometry_plus_Z_mean_baseline": {
+  "value": 2.059,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_avgMAE_geometry_plus_Z_RandomForest": {
+  "value": 1.954,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_avgMAE_geometry_plus_Z_Ridge": {
+  "value": 1.725,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_avgMAE_geometry_plus_electronic_mean_baseline": {
+  "value": 2.059,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_avgMAE_geometry_plus_electronic_RandomForest": {
+  "value": 0.447,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_avgMAE_geometry_plus_electronic_Ridge": {
+  "value": 0.698,
+  "stage": "stage 5a",
+  "note": "clean leave-one-B-out, unweighted mean over 6 elements"
+ },
+ "lobo_MAE_geometry_only_mean_baseline_Ge": {
+  "value": 1.5826,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_only_mean_baseline_Sn": {
+  "value": 2.2953,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_only_mean_baseline_Pb": {
+  "value": 2.0295,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_only_mean_baseline_Ca": {
+  "value": 2.5074,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_only_mean_baseline_Sr": {
+  "value": 1.9832,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_only_mean_baseline_Ba": {
+  "value": 1.9558,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "lobo_MAE_geometry_only_RandomForest_Ge": {
+  "value": 3.0794,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_only_RandomForest_Sn": {
+  "value": 1.607,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_only_RandomForest_Pb": {
+  "value": 0.4693,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_only_RandomForest_Ca": {
+  "value": 3.3885,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_only_RandomForest_Sr": {
+  "value": 1.9405,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_only_RandomForest_Ba": {
+  "value": 0.5991,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "lobo_MAE_geometry_only_Ridge_Ge": {
+  "value": 1.3925,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_only_Ridge_Sn": {
+  "value": 2.3168,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_only_Ridge_Pb": {
+  "value": 2.2077,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_only_Ridge_Ca": {
+  "value": 3.5314,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_only_Ridge_Sr": {
+  "value": 1.7923,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_only_Ridge_Ba": {
+  "value": 1.5142,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "lobo_MAE_geometry_plus_Z_mean_baseline_Ge": {
+  "value": 1.5826,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_mean_baseline_Sn": {
+  "value": 2.2953,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_plus_Z_mean_baseline_Pb": {
+  "value": 2.0295,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_mean_baseline_Ca": {
+  "value": 2.5074,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_plus_Z_mean_baseline_Sr": {
+  "value": 1.9832,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_mean_baseline_Ba": {
+  "value": 1.9558,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "lobo_MAE_geometry_plus_Z_RandomForest_Ge": {
+  "value": 3.183,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_RandomForest_Sn": {
+  "value": 2.3978,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_plus_Z_RandomForest_Pb": {
+  "value": 0.2196,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_RandomForest_Ca": {
+  "value": 3.3796,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_plus_Z_RandomForest_Sr": {
+  "value": 1.678,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_RandomForest_Ba": {
+  "value": 0.8676,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "lobo_MAE_geometry_plus_Z_Ridge_Ge": {
+  "value": 0.8275,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_Ridge_Sn": {
+  "value": 2.0908,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_plus_Z_Ridge_Pb": {
+  "value": 4.782,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_Ridge_Ca": {
+  "value": 2.0914,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_plus_Z_Ridge_Sr": {
+  "value": 0.292,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_Z_Ridge_Ba": {
+  "value": 0.2671,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "lobo_MAE_geometry_plus_electronic_mean_baseline_Ge": {
+  "value": 1.5826,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_mean_baseline_Sn": {
+  "value": 2.2953,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_plus_electronic_mean_baseline_Pb": {
+  "value": 2.0295,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_mean_baseline_Ca": {
+  "value": 2.5074,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_plus_electronic_mean_baseline_Sr": {
+  "value": 1.9832,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_mean_baseline_Ba": {
+  "value": 1.9558,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "lobo_MAE_geometry_plus_electronic_RandomForest_Ge": {
+  "value": 0.6201,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_RandomForest_Sn": {
+  "value": 0.7108,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_plus_electronic_RandomForest_Pb": {
+  "value": 0.5167,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_RandomForest_Ca": {
+  "value": 0.4842,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_plus_electronic_RandomForest_Sr": {
+  "value": 0.1623,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_RandomForest_Ba": {
+  "value": 0.1854,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "lobo_MAE_geometry_plus_electronic_Ridge_Ge": {
+  "value": 0.545,
+  "stage": "stage 5a",
+  "note": "n_train=174, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_Ridge_Sn": {
+  "value": 0.6958,
+  "stage": "stage 5a",
+  "note": "n_train=172, n_test=24"
+ },
+ "lobo_MAE_geometry_plus_electronic_Ridge_Pb": {
+  "value": 1.6341,
+  "stage": "stage 5a",
+  "note": "n_train=154, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_Ridge_Ca": {
+  "value": 0.4122,
+  "stage": "stage 5a",
+  "note": "n_train=168, n_test=25"
+ },
+ "lobo_MAE_geometry_plus_electronic_Ridge_Sr": {
+  "value": 0.4953,
+  "stage": "stage 5a",
+  "note": "n_train=170, n_test=22"
+ },
+ "lobo_MAE_geometry_plus_electronic_Ridge_Ba": {
+  "value": 0.406,
+  "stage": "stage 5a",
+  "note": "n_train=162, n_test=19"
+ },
+ "ablation_avgMAE_geometry_only_RandomForest": {
+  "value": 1.847,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_geometry_only_Ridge": {
+  "value": 2.126,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_g14_flag_only_RandomForest": {
+  "value": 0.361,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_g14_flag_only_Ridge": {
+  "value": 0.343,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_EN_B_only_RandomForest": {
+  "value": 0.42,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_EN_B_only_Ridge": {
+  "value": 0.811,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_IE_B_only_RandomForest": {
+  "value": 0.658,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_IE_B_only_Ridge": {
+  "value": 0.521,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_EN_X_only_RandomForest": {
+  "value": 1.871,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_EN_X_only_Ridge": {
+  "value": 2.126,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_all_electronic_RandomForest": {
+  "value": 0.447,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_all_electronic_Ridge": {
+  "value": 0.698,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_all_electronic_plus_g14_flag_RandomForest": {
+  "value": 0.446,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "ablation_avgMAE_plus_all_electronic_plus_g14_flag_Ridge": {
+  "value": 0.512,
+  "stage": "stage 5b",
+  "note": ""
+ },
+ "logo_MAE_G14toG2_geometry_only_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_only_mean_baseline": {
+  "value": -3.504,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G14toG2_geometry_only_RandomForest": {
+  "value": 3.539,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_only_RandomForest": {
+  "value": -3.539,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G14toG2_geometry_only_Ridge": {
+  "value": 3.7,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_only_Ridge": {
+  "value": -3.7,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G14toG2_geometry_plus_Z_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_plus_Z_mean_baseline": {
+  "value": -3.504,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G14toG2_geometry_plus_Z_RandomForest": {
+  "value": 3.625,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_plus_Z_RandomForest": {
+  "value": -3.625,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G14toG2_geometry_plus_Z_Ridge": {
+  "value": 4.102,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_plus_Z_Ridge": {
+  "value": -4.102,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G14toG2_geometry_plus_electronic_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_plus_electronic_mean_baseline": {
+  "value": -3.504,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G14toG2_geometry_plus_electronic_RandomForest": {
+  "value": 3.663,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_plus_electronic_RandomForest": {
+  "value": -3.663,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G14toG2_geometry_plus_electronic_Ridge": {
+  "value": 5.031,
+  "stage": "stage 5c",
+  "note": "n_train=76, n_test=77"
+ },
+ "logo_MSE_G14toG2_geometry_plus_electronic_Ridge": {
+  "value": -5.031,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_only_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_only_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_only_RandomForest": {
+  "value": 3.565,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_only_RandomForest": {
+  "value": 3.565,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_only_Ridge": {
+  "value": 3.635,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_only_Ridge": {
+  "value": 3.635,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_plus_Z_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_plus_Z_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_plus_Z_RandomForest": {
+  "value": 3.552,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_plus_Z_RandomForest": {
+  "value": 3.552,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_plus_Z_Ridge": {
+  "value": 3.711,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_plus_Z_Ridge": {
+  "value": 3.711,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_plus_electronic_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_plus_electronic_mean_baseline": {
+  "value": 3.504,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_plus_electronic_RandomForest": {
+  "value": 3.282,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_plus_electronic_RandomForest": {
+  "value": 3.282,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
+ },
+ "logo_MAE_G2toG14_geometry_plus_electronic_Ridge": {
+  "value": 2.275,
+  "stage": "stage 5c",
+  "note": "n_train=77, n_test=76"
+ },
+ "logo_MSE_G2toG14_geometry_plus_electronic_Ridge": {
+  "value": 2.275,
+  "stage": "stage 5c",
+  "note": "mean signed error = predicted minus true"
  }
 }

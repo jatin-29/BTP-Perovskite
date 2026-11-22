@@ -1,0 +1,19 @@
+direction,feature_set,model,n_train,n_test,MAE_eV,mean_signed_error_eV,R2
+train Group 14 -> test Group 2,geometry only,mean baseline,76,77,3.504,-3.504,-18.935
+train Group 14 -> test Group 2,geometry only,RandomForest,76,77,3.539,-3.539,-18.896
+train Group 14 -> test Group 2,geometry only,Ridge,76,77,3.7,-3.7,-20.499
+train Group 14 -> test Group 2,geometry + Z,mean baseline,76,77,3.504,-3.504,-18.935
+train Group 14 -> test Group 2,geometry + Z,RandomForest,76,77,3.625,-3.625,-19.823
+train Group 14 -> test Group 2,geometry + Z,Ridge,76,77,4.102,-4.102,-25.341
+train Group 14 -> test Group 2,geometry + electronic,mean baseline,76,77,3.504,-3.504,-18.935
+train Group 14 -> test Group 2,geometry + electronic,RandomForest,76,77,3.663,-3.663,-20.296
+train Group 14 -> test Group 2,geometry + electronic,Ridge,76,77,5.031,-5.031,-38.442
+train Group 2 -> test Group 14,geometry only,mean baseline,77,76,3.504,3.504,-24.158
+train Group 2 -> test Group 14,geometry only,RandomForest,77,76,3.565,3.565,-24.904
+train Group 2 -> test Group 14,geometry only,Ridge,77,76,3.635,3.635,-25.595
+train Group 2 -> test Group 14,geometry + Z,mean baseline,77,76,3.504,3.504,-24.158
+train Group 2 -> test Group 14,geometry + Z,RandomForest,77,76,3.552,3.552,-24.702
+train Group 2 -> test Group 14,geometry + Z,Ridge,77,76,3.711,3.711,-26.712
+train Group 2 -> test Group 14,geometry + electronic,mean baseline,77,76,3.504,3.504,-24.158
+train Group 2 -> test Group 14,geometry + electronic,RandomForest,77,76,3.282,3.282,-20.837
+train Group 2 -> test Group 14,geometry + electronic,Ridge,77,76,2.275,2.275,-9.969
