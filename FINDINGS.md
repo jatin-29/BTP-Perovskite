@@ -140,12 +140,28 @@ HSE-PBE-SOC minus PBE is negative for all 22 Pb compounds (mean -0.306 eV). It i
 Ca (+1.11), Sr (+1.03) and Ba (+1.04) compound. For HSErel_SOC minus PBE, 9 of 25 Pb compounds are below zero
 (mean +0.33 eV).
 
-**B4. CONFIRMED (with a correction to section 9 item 2). The gap falls from Cl to Br to I for every B element** at PBE
-and HSE-PBE-SOC (same-compound means, `tables/stage2_halide_monotonic.csv`). The section 9 numbers are reproduced to
-within 0.01 eV when each level is averaged over ALL its available compounds. On the SAME compounds (the 4 or 5 pure
-compounds that have both PBE and HSE-PBE-SOC), the PBE means for Sn-Cl and Pb change:
-Sn-Cl 1.10 (vs 1.37), Pb-Cl 2.27 (vs 2.34), Pb-I 1.56 (vs 1.64) eV. This happens because FASnCl3, FAPbCl3 and FAPbI3 drop
-out. The Group 14 order is Pb > Ge > Sn at PBE and Ge > Pb > Sn at HSE-PBE-SOC for all three halides, also on the same compounds.
+**B4. CONFIRMED. The gap falls from Cl to Br to I for every B element, at every level, on one shared compound set**
+(session 2: every halide-trend number and fig06 now use one compound set per cell, shared by the levels compared;
+`tables/fig06_halide_trend.csv`, `tables/stage2_halide_trend_four_level_set.csv`).
+Mean gap of pure compounds (eV), Cl / Br / I, with n per cell (n = number of A cations with both gaps):
+
+| B | n (Cl/Br/I) | PBE | HSE-PBE-SOC |
+|---|---|---|---|
+| Ge | 5/5/5 | 1.585 / 1.156 / 0.906 | 2.272 / 1.729 / 1.282 |
+| Sn | 4/5/5 | 1.102 / 0.866 / 0.639 | 1.498 / 1.206 / 0.815 |
+| Pb | 4/5/4 | 2.274 / 1.871 / 1.560 | 2.040 / 1.553 / 1.069 |
+| Ca | 5/5/4 | 5.007 / 4.198 / 3.502 | 6.373 / 5.321 / 4.291 |
+| Sr | 4/4/4 | 4.767 / 4.015 / 3.469 | 6.057 / 5.163 / 4.231 |
+| Ba | 4/5/5 | 4.519 / 3.911 / 3.361 | 5.779 / 5.009 / 4.199 |
+
+- The pure compounds with all four gaps are exactly the same set (the four-level table has the same n per cell). On
+  that set the gap also falls Cl > Br > I at HSErel and HSErel_SOC for every B except Sn (HSErel: Cl 2.114, Br 2.227,
+  I 1.766; HSErel_SOC: Cl 1.870, Br 2.004, I 1.495 eV), which is the MASn/MAGe anomaly of item A4 showing in the mean.
+- Group 14 order on this set: Pb > Ge > Sn at PBE and Ge > Pb > Sn at HSE-PBE-SOC, for all three halides.
+- SUPERSEDED: the session-1 averages over ALL compounds available at each level (different compound sets per level,
+  which reproduced section 9 item 2 within 0.01 eV) are no longer used for any number or figure. They are kept only in
+  `tables/stage2_superseded_all_compound_means.csv`. Where the sets differ, the change is: Sn-Cl PBE 1.374 -> 1.102,
+  Pb-Cl PBE 2.341 -> 2.274, Pb-I PBE 1.637 -> 1.560 eV (FASnCl3, FAPbCl3 and FAPbI3 have no HSE-PBE-SOC gap).
 
 **B5. HYPOTHESIS (small n). Halide bowing has opposite signs in the two groups** (`tables/fig20_bowing_summary.csv`).
 Deviation from linear interpolation between the pure end members (same A, B, level):
@@ -183,11 +199,16 @@ folds: 16, 15, 15, 15, 15 rows. Mean baseline: grouped R2 -0.04 (MAE 0.58 eV).
 **D1. CONFIRMED (small n). The linear model on composition fractions** gives grouped R2 0.738 (MAE 0.285 eV) and random
 R2 0.739 (`tables/fig12_random_vs_grouped.csv`). Same as section 9 (0.74 / 0.74). Over 10 random-KFold seeds, random R2 ranges 0.739 to 0.794.
 
-**D2. HYPOTHESIS. Ridge with polynomial products** (degree 2, standardized). Pooled out-of-fold R2, random / grouped:
-alpha 0.1: 0.924 / 0.794; alpha 1: 0.912 / 0.866; alpha 10: 0.857 / 0.864; alpha 100: 0.658 / 0.685.
-Nested grouped CV (alpha picked by an inner GroupKFold(4) on training folds only, so honest): R2 0.864, MAE 0.213 eV.
-It chose alpha = 10 in all 5 outer folds. Random KFold overstates the score most at low alpha (0.924 vs 0.794 at
-alpha 0.1). Over 10 random seeds, the alpha 1 random R2 ranges 0.684 to 0.923, so one random split is not reliable.
+**D2. HYPOTHESIS (small n). Ridge with polynomial products: headline = nested grouped CV R2 0.864, MAE 0.213 eV**
+(degree-2 products, standardized, alpha chosen by an inner GroupKFold(4) inside each training part; it chose alpha = 10 in
+all 5 outer folds; n = 76, 43 groups).
+- Why only the nested number is the headline: the fixed-alpha grouped scores (alpha 0.1: 0.794; 1: 0.866; 10: 0.864;
+  100: 0.685) are each honest for one fixed alpha. But reporting the best of them (0.866 at alpha 1) means the test folds
+  chose alpha, which makes that score optimistic. In the nested version the test fold never influences the choice. The
+  fixed-alpha numbers are kept in `tables/fig12_random_vs_grouped.csv` only to show the random-versus-grouped gap.
+- Random KFold overstates the score most at low alpha (0.924 random vs 0.794 grouped at alpha 0.1). Over 10 random seeds the
+  alpha 1 random R2 ranges 0.684 to 0.923, so a single random split is not reliable.
+- Session-1 discrepancy (alpha 1 grouped 0.866 vs 0.80 in section 9) is no longer a headline number.
 
 **D3. CONFIRMED (small n). Linear coefficients** (eV per full site substitution; reference CsPbCl3-like, intercept 1.777;
 95 percent row bootstrap / group bootstrap, 500 resamples; `tables/fig11_coefficients.csv`):
@@ -223,6 +244,12 @@ Ca 0.48, Sr 0.16, Ba 0.19. Ridge Pb 1.63. All within 0.007 eV of section 9 item 
 - Robustness: RF over 10 seeds gives 0.447 to 0.463 (geometry + electronic). 95 percent bootstrap range of the average
   MAE (test rows resampled): RF 0.39 to 0.50, Ridge 0.65 to 0.76, mean baseline 1.94 to 2.17 eV.
 - Geometry alone does not beat the mean baseline in a meaningful way (RF 1.85 vs 2.06; Ridge is worse than the baseline).
+- Why Ridge fails on Pb (session 2, `tables/stage5_test_outside_training_range.csv`): all 22 Pb test rows lie outside the
+  training range of EN_B (test 2.33; training 0.89-2.01) and of Z_B (82; training at most 56), and 68% lie outside the training
+  range of dEN. A linear model extrapolates these values, and the Pb Ridge MAE is 1.63 eV. Extrapolation alone does not
+  decide the error, however. All Ba test rows are also outside the training range of rB, EN_B and IE_B, yet the Ba Ridge MAE
+  is 0.41 eV. Fraction of test rows outside the training range for (rB, EN_B, IE_B, Z_B): Ge 1.0/0/1.0/0; Sn 0/0/0/0;
+  Pb 0/1.0/0/1.0; Ca 0/0/0/1.0; Sr 0/0/0/0; Ba 1.0/1.0/1.0/0.
 
 **E2. CONFIRMED (new). The electronic descriptors mainly act as a Group 14 / Group 2 label** (ablation,
 `tables/fig16_ablation.csv`, average MAE, RF / Ridge):
@@ -429,13 +456,17 @@ leave-one-B-out number (item 7), all quoted dataset values (item 6).
 
 ## Stage 9 (optional): compact formula
 
-**H1. HYPOTHESIS. A 3-term linear formula does about as well as the 8-term composition model in strict Group 14, but
-the chosen formula is not stable.** PySR was not used, because it needs Julia. Instead, every linear formula with
-1 to 3 terms from a library of 21 descriptors (1561 formulas) was searched. The formula was chosen inside each training
-fold with an inner GroupKFold(4) (nested, honest). Outer splits: the same GroupKFold(5) as stage 4 (`tables/stage9_compact_formula.csv`).
+**H1. HYPOTHESIS, NOT STABLE. A 3-term linear formula scores about as well as the 8-term composition model in strict
+Group 14, but which formula is chosen changes from fold to fold.** PySR was not used, because it needs Julia. Instead,
+every linear formula with 1 to 3 terms from a library of 21 descriptors (1561 formulas) was searched. The formula was
+chosen inside each training fold with an inner GroupKFold(4) (nested, honest).
 - Nested grouped R2 0.749, MAE 0.267 eV (n = 76), against 0.738 / 0.285 eV for the 8-term linear fraction model.
-- The five outer folds chose different formulas: rA + rB + t; rX + t + Z_B; frac_Sn + organic_frac + Z_X; mu + t + IE_B (twice).
-  The tolerance factor appears in 4 of 5.
-- Chosen on all 76 rows: gap = -20.251 + 7.231 mu + 6.284 t + 0.540 IE_B (eV), grouped R2 0.805. This number is
-  optimistic, because the choice saw all rows. Within strict Group 14, IE_B only takes the Ge, Sn and Pb values, so it
-  works like a B-element label here.
+- Instability: in the 5 standard outer folds, 4 different formulas were chosen. In 25 outer folds (5 shuffled repeats of
+  GroupKFold(5)), 7 different formulas were chosen; the most common, rA + rB + t, in only 8 of 25
+  (`tables/stage9_formula_counts.csv`).
+- How often each term was chosen (5 standard folds / 25 repeated folds; `tables/stage9_term_frequency.csv`): tolerance 4/19,
+  rA 1/9, Z_X 1/9, rB 1/8, octahedral 2/8, IE_B 2/8, frac_Sn 1/5, organic_frac 1/5, EN_B 0/3, dEN 0/1, rX 1/0, Z_B 1/0.
+  Only the tolerance factor is chosen in most folds (19 of 25).
+- The formula chosen on all 76 rows (gap = -20.251 + 7.231 mu + 6.284 t + 0.540 IE_B, grouped R2 0.805) is optimistic,
+  because the choice saw all rows, and it is NOT a stable result. Do not report it as "the" formula. Within strict Group 14,
+  IE_B only takes the Ge, Sn and Pb values, so it works like a B-element label.
