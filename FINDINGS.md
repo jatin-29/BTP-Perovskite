@@ -282,8 +282,8 @@ Set `shannon_CN12_CN6` (config cell). Sources per radius: `tables/radii_sets_sou
 
 What survives: (i) geometry alone never beats the mean baseline in a useful way (with Shannon radii RF is even worse,
 3.03 eV against 2.06); (ii) adding only g14_flag does at least as well as all electronic descriptors (RF 0.31 versus 0.45;
-Ridge 0.34 versus 1.05); (iii) leave-one-group-out still fails in both directions. G14 -> G2: RF 3.54-3.67, Ridge
-3.67-4.64 eV. G2 -> G14: RF 3.30-3.56, Ridge 1.72-3.69 eV (every value in the comparison table).
+Ridge 0.34 versus 1.05); (iii) leave-one-group-out still fails in both directions. G14 -> G2 (Shannon radii): RF 3.60-3.67, Ridge
+3.67-4.64 eV. G2 -> G14: RF 3.30-3.56, Ridge 1.72-3.69 eV, against a mean baseline of 3.50 eV (all values in the comparison table).
 What changes: the size of the geometry-only and Ridge numbers, which depend on how the radii place Ge, Sr and Ba
 relative to the other elements. They are therefore NOT robust numbers.
 - Tolerance/octahedral analyses (Pearson r with the HSE-PBE-SOC gap, dataset -> Shannon). t: strict Group 14 0.78 -> 0.73,
